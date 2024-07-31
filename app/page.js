@@ -1,7 +1,7 @@
 "use client";
 
-import About from "@/component/About";
-import Contact from "@/component/Contact";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, StyleSheet } from "react";
