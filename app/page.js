@@ -27,12 +27,12 @@ export default function main() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col flex-1 justify-center items-center">
+    <main className=" overflow-auto w-screen h-screen flex flex-col justify-center items-center">
       <SpeedInsights />
       {/* <About /> */}
       {/* <Projects /> */}
       <Contact />
-      <>Made by el-avi-ator</>
+      <div className="p-1 mb-4">Made by @el-avi-ator</div>
     </main>
   );
 }

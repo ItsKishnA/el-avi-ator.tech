@@ -122,7 +122,7 @@ const ContactMe = () => {
     <div className="p-4 flex flex-col">
       <h2 className="text-3xl font-bold leading-loose">Contact Me</h2>
 
-      <ContactCard
+      <ContactCard // linkedin
         cardName="linkedin"
         title={
           <span>
@@ -133,18 +133,7 @@ const ContactMe = () => {
         toCopy={"avi-mahajan2401"}
       />
 
-      {/* <ContactCard
-        cardName="twitter"
-        title={
-          <span>
-            Connect me on <b className="text-white">X</b>(Twitter)
-          </span>
-        }
-        toLink={"#"}
-        toCopy={"@avi_mahajan"}
-      /> */}
-
-      <ContactCard
+      <ContactCard // github
         cardName="github"
         title={
           <span>
@@ -155,7 +144,7 @@ const ContactMe = () => {
         toCopy={"ItsKishnA"}
       />
 
-      <ContactCard
+      <ContactCard // gmail
         cardName="gmail"
         title={
           <span>
