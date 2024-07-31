@@ -300,9 +300,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex items-center">
-      <About />
+      {/* <About /> */}
       {/* <Projects /> */}
-      {/* <ContactPage /> */}
+      <ContactPage />
     </main>
   );
 }
