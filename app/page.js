@@ -4,6 +4,7 @@ import About from "@/component/About";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, StyleSheet } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
   const mehh = {
@@ -300,7 +301,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex items-center">
+      <SpeedInsights />
       {/* <About /> */}
+
       {/* <Projects /> */}
       <ContactPage />
     </main>
