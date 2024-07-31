@@ -27,7 +27,7 @@ export default function main() {
   };
 
   return (
-    <main className=" overflow-auto w-screen h-screen flex flex-col justify-center items-center">
+    <main className="w-screen h-screen flex flex-col justify-center items-center">
       <SpeedInsights />
       {/* <About /> */}
       {/* <Projects /> */}

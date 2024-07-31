@@ -85,10 +85,12 @@ const ContactMe = () => {
         <h3 className="text-2xl text-gray-600">{title}</h3>
 
         <div className="flex justify-between">
+          {/* icon to redirect follower */}
           <Link href={toLink} target="_blank">
             <Icon iconName={cardName} />
           </Link>
 
+          {/* copy to clipboard button */}
           <button
             className="flex items-center bg-gray-800 px-5 m-2 rounded-full text-sm text-gray-400"
             onClick={handleClick}
@@ -197,7 +199,7 @@ const MessageMe = () => {
 
 const Contact = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full md:h-full">
+    <div className="flex flex-col items-center md:flex-row w-full md:h-full">
       <div className="p-4 md:flex flex-[1] items-center">
         <MessageMe />
       </div>
