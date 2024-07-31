@@ -168,20 +168,20 @@ const MessageMe = () => {
     <div id="MESSAGE" className="w-full p-4 h-2/3 flex flex-col">
       <h2 className="text-3xl font-bold leading-loose">Drop a message</h2>
       <form className="flex flex-col flex-1">
-        <div className="flex flex-col flex-1 md:flex-row">
-          <input
-            type="text"
-            placeholder="First Name"
-            className="p-2 m-2 flex-1"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name "
-            className="p-2 m-2 flex-1"
-            required
-          />
-        </div>
+        {/* <div className="flex flex-col flex-1 md:flex-row"> */}
+        <input
+          type="text"
+          placeholder="First Name"
+          className="p-2 m-2 flex-1"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Last Name "
+          className="p-2 m-2 flex-1"
+          required
+        />
+        {/* </div> */}
         <input
           type="email"
           placeholder="Email"
@@ -200,14 +200,27 @@ const MessageMe = () => {
 const Contact = () => {
   return (
     <div className="flex flex-col items-center md:flex-row w-full md:h-full">
-      <div className="p-4 md:flex flex-[1] items-center">
+      <div
+        style={styles.components}
+        className="md:flex flex-[1] items-center px-2 mx-2 bg-slate-800 sm:min-w-[85%] md:min-w-0"
+      >
         <MessageMe />
       </div>
-      <div className="flex-[1] p-4 flex justify-center">
+      <div
+        style={styles.components}
+        className="flex-[1] p-2 flex justify-center"
+      >
         <ContactMe />
       </div>
     </div>
   );
+};
+
+const styles = {
+  components: {
+    // height: "50vh",
+    // padding: "0rem",
+  },
 };
 
 export default Contact;

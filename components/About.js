@@ -38,11 +38,7 @@ const Description = () => {
 
 const DownloadButton = () => {
   return (
-    <a
-      href={"/resume/resume.pdf"}
-      target="_blank"
-      download={"Avi's_Resume.pdf"}
-    >
+    <a href={"/resume/resume.pdf"} target="_blank" download={"resume.pdf"}>
       <button type="button">Download Resume</button>
     </a>
   );
