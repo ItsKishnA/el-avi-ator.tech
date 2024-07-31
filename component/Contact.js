@@ -209,7 +209,7 @@ const MessageMe = () => {
 const Contact = () => {
   return (
     <div className="flex flex-col md:flex-row w-full md:h-full">
-      <div className="md:flex flex-[1] items-center p-4">
+      <div className="p-4 md:flex flex-[1] items-center">
         <MessageMe />
       </div>
       <div className="flex-[1] p-4 flex justify-center">
