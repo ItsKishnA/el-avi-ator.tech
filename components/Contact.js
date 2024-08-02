@@ -1,8 +1,29 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { Crimson_Text } from "next/font/google";
+import { useEffect } from "react";
 
 const ContactMe = () => {
-  const iconSize = 50;
+  const [iconSize, setIconSize] = useState(40);
+
+  useEffect(() => {
+    const updateIconSize = () => {
+      if (window.innerWidth >= 1024) {
+        setIconSize(50);
+      } else if (window.innerWidth >= 768) {
+        setIconSize(40);
+      } else if (window.innerWidth >= 640) {
+        setIconSize(40);
+      } else {
+        setIconSize(35);
+      }
+    };
+
+    window.addEventListener("resize", updateIconSize);
+    updateIconSize(); // Set initial size
+
+    return () => window.removeEventListener("resize", updateIconSize);
+  }, []);
 
   const Icon = ({ iconName }) => {
     let color;
@@ -82,7 +103,7 @@ const ContactMe = () => {
 
     return (
       <div className="flex flex-col p-4">
-        <h3 className="text-2xl text-gray-600">{title}</h3>
+        <h3 className="text-gray-600 text-base">{title}</h3>
 
         <div className="flex justify-between">
           {/* icon to redirect follower */}
@@ -92,7 +113,7 @@ const ContactMe = () => {
 
           {/* copy to clipboard button */}
           <button
-            className="flex items-center bg-gray-800 px-5 m-2 rounded-full text-sm text-gray-400"
+            className="flex items-center bg-gray-800 px-5 py-1 m-2 rounded-full text-sm text-gray-500"
             onClick={handleClick}
           >
             {toCopy}
@@ -101,7 +122,7 @@ const ContactMe = () => {
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
-                style={{ fill: "white", marginLeft: "8px" }}
+                style={{ fill: "#6b7280", marginLeft: "8px" }}
               >
                 <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1 15-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8z" />
               </svg>
@@ -110,7 +131,11 @@ const ContactMe = () => {
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
-                style={{ fill: "white", marginLeft: "8px" }}
+                style={{
+                  fill: "#6b7280",
+                  marginLeft: "8px",
+                  // marginRi: "4px",
+                }}
               >
                 <path d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" />
               </svg>
@@ -120,9 +145,12 @@ const ContactMe = () => {
       </div>
     );
   };
+
   return (
-    <div className="p-4 flex flex-col">
-      <h2 className="text-3xl font-bold leading-loose">Contact Me</h2>
+    <div className="p-4 flex flex-col w-full">
+      {/* make a div and add classname and change font to crimson text */}
+
+      <h2 className="text-2xl font-bold leading-loose">Contact Me</h2>
 
       <ContactCard // linkedin
         cardName="linkedin"
@@ -165,30 +193,35 @@ const ContactMe = () => {
 const MessageMe = () => {
   return (
     // <div id="MESSAGE" className="flex flex-col flex-1 p-4">
-    <div id="MESSAGE" className="w-full p-4 h-2/3 flex flex-col">
+    <div id="MESSAGE" className="w-[80%] p-4 flex flex-col">
       <h2 className="text-3xl font-bold leading-loose">Drop a message</h2>
       <form className="flex flex-col flex-1">
         {/* <div className="flex flex-col flex-1 md:flex-row"> */}
         <input
           type="text"
           placeholder="First Name"
-          className="p-2 m-2 flex-1"
+          style={styles.input}
           required
         />
         <input
           type="text"
           placeholder="Last Name "
-          className="p-2 m-2 flex-1"
+          style={styles.input}
           required
         />
         {/* </div> */}
         <input
           type="email"
           placeholder="Email"
-          className="p-2 m-2 flex-1 text-gray-600 aligh-top"
+          style={styles.input}
+          // className="p-2 m-2 flex-1 text-gray-600"
           required
         />
-        <textarea placeholder="Message" className="p-2 m-2 flex-1" required />
+        <textarea
+          placeholder="Message"
+          className="p-2 m-2 flex-1 rounded-sm"
+          required
+        />
         <button type="submit" className="p-2 m-2">
           Send
         </button>
@@ -201,14 +234,14 @@ const Contact = () => {
   return (
     <div className="flex flex-col items-center md:flex-row w-full md:h-full">
       <div
-        style={styles.components}
-        className="md:flex flex-[1] items-center px-2 mx-2 bg-slate-800 sm:min-w-[85%] md:min-w-0"
+        // style={styles.components}
+        className="md:flex flex-1 justify-center px-4 flex mx-2 w-[85%]"
       >
         <MessageMe />
       </div>
       <div
         style={styles.components}
-        className="flex-[1] p-2 flex justify-center"
+        className="flex flex-[1] p-2 justify-center w-[85%]"
       >
         <ContactMe />
       </div>
@@ -219,7 +252,19 @@ const Contact = () => {
 const styles = {
   components: {
     // height: "50vh",
+    // justifyContent: "center",
+    // alignItems: "center",
+    // alignContent: "center",
+    // justifyItems: "center",
     // padding: "0rem",
+  },
+  input: {
+    margin: "0.5rem",
+    padding: "0.5rem",
+    // display: "flex",
+    // flex: "1",
+    // flex: "1",
+    borderRadius: "0.125rem",
   },
 };
 
