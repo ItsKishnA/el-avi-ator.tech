@@ -194,22 +194,24 @@ const MessageMe = () => {
   return (
     // <div id="MESSAGE" className="flex flex-col flex-1 p-4">
     <div id="MESSAGE" className="w-[80%] p-4 flex flex-col">
-      <h2 className="text-3xl font-bold leading-loose">Drop a message</h2>
+      <h2 className="text-2xl font-bold leading-loose">Drop a message</h2>
       <form className="flex flex-col flex-1">
-        {/* <div className="flex flex-col flex-1 md:flex-row"> */}
-        <input
-          type="text"
-          placeholder="First Name"
-          style={styles.input}
-          required
-        />
-        <input
-          type="text"
-          placeholder="Last Name "
-          style={styles.input}
-          required
-        />
-        {/* </div> */}
+        <div className="flex flex-row flex-wrap">
+          <input
+            type="text"
+            placeholder="First Name"
+            style={styles.input}
+            className="flex flex-[1] min-w-0"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name "
+            style={styles.input}
+            className="flex flex-[1] min-w-0"
+            required
+          />
+        </div>
         <input
           type="email"
           placeholder="Email"
@@ -219,7 +221,8 @@ const MessageMe = () => {
         />
         <textarea
           placeholder="Message"
-          className="p-2 m-2 flex-1 rounded-sm"
+          style={styles.input}
+          // className="p-2 m-2 flex-1 rounded-sm"
           required
         />
         <button type="submit" className="p-2 m-2">
@@ -261,10 +264,8 @@ const styles = {
   input: {
     margin: "0.5rem",
     padding: "0.5rem",
-    // display: "flex",
-    // flex: "1",
-    // flex: "1",
     borderRadius: "0.125rem",
+    color: "#0f0f0f",
   },
 };
 
