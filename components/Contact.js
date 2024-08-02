@@ -194,7 +194,7 @@ const ContactMe = () => {
 const MessageMe = () => {
   return (
     // <div id="MESSAGE" className="flex flex-col flex-1 p-4">
-    <div id="MESSAGE" className="w-[80%] p-4 flex flex-col">
+    <div id="MESSAGE" className="w-[95%] p-4 flex flex-col">
       <h2 className="text-2xl font-bold leading-loose">Drop a message</h2>
 
       {/* how much did u like our website section... under which user can select one of his choices of satisfaction out of 5...all 5 choices are those happy to sad emojis... */}
@@ -319,7 +319,7 @@ const Contact = () => {
     <div className="flex flex-col items-center md:flex-row w-full md:h-full">
       <div
         // style={styles.components}
-        className="md:flex flex-1 justify-center px-4 flex mx-2 w-[85%]"
+        className="md:flex flex-1 justify-center px-4 flex mx-2 w-[90%]"
       >
         <MessageMe />
       </div>
