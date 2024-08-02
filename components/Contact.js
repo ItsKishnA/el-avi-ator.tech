@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Crimson_Text } from "next/font/google";
 import { useEffect } from "react";
 
 const ContactMe = () => {
@@ -205,7 +204,7 @@ const MessageMe = () => {
           <h3 className="text-gray-600 text-base px-2">
             How much did you like our website?
           </h3>
-          <div className="flex flex-row justify-evenly space-x-4 my-2">
+          <div className="flex flex-row-reverse items-center content-center justify-evenly space-x-4 my-2 flex-wrap">
             <input
               type="radio"
               id="happy"
