@@ -113,7 +113,7 @@ const ContactMe = () => {
 
           {/* copy to clipboard button */}
           <button
-            className="flex items-center bg-gray-800 px-5 py-1 m-2 rounded-full text-sm text-gray-500"
+            className="flex items-center bg-gray-800 bg-opacity-50 px-5 py-1 m-2 rounded-full text-sm text-gray-500 border border-gray-700"
             onClick={handleClick}
           >
             {toCopy}
@@ -122,7 +122,10 @@ const ContactMe = () => {
                 width="16"
                 height="16"
                 viewBox="0 0 24 24"
-                style={{ fill: "#6b7280", marginLeft: "8px" }}
+                style={{
+                  fill: "#6b7280",
+                  marginLeft: "8px",
+                }}
               >
                 <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1 15-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8z" />
               </svg>
@@ -134,7 +137,6 @@ const ContactMe = () => {
                 style={{
                   fill: "#6b7280",
                   marginLeft: "8px",
-                  // marginRi: "4px",
                 }}
               >
                 <path d="M7 5a3 3 0 0 1 3-3h9a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-2v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h2zm2 2h5a3 3 0 0 1 3 3v5h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1zM5 9a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1z" />
@@ -195,7 +197,87 @@ const MessageMe = () => {
     // <div id="MESSAGE" className="flex flex-col flex-1 p-4">
     <div id="MESSAGE" className="w-[80%] p-4 flex flex-col">
       <h2 className="text-2xl font-bold leading-loose">Drop a message</h2>
+
+      {/* how much did u like our website section... under which user can select one of his choices of satisfaction out of 5...all 5 choices are those happy to sad emojis... */}
+
       <form className="flex flex-col flex-1">
+        <div className="flex flex-col flex-wrap">
+          <h3 className="text-gray-600 text-base px-2">
+            How much did you like our website?
+          </h3>
+          <div className="flex flex-row justify-evenly space-x-4 my-2">
+            <input
+              type="radio"
+              id="happy"
+              name="satisfaction"
+              value="happy"
+              className="peer/happy hidden"
+            />
+            <label
+              htmlFor="happy"
+              className="cursor-pointer p-1 text-2xl peer-checked/happy:bg-white peer-checked/happy:rounded-full peer-checked/happy:border peer-checked/happy:border-black"
+            >
+              😊
+            </label>
+
+            <input
+              type="radio"
+              id="good"
+              name="satisfaction"
+              value="good"
+              className="peer/good hidden"
+            />
+            <label
+              htmlFor="good"
+              className="cursor-pointer p-1 text-2xl peer-checked/good:bg-white peer-checked/good:rounded-full peer-checked/good:border peer-checked/good:border-black"
+            >
+              😀
+            </label>
+
+            <input
+              type="radio"
+              id="neutral"
+              name="satisfaction"
+              value="neutral"
+              className="peer/neutral hidden"
+            />
+            <label
+              htmlFor="neutral"
+              className="cursor-pointer p-1 text-2xl peer-checked/neutral:bg-white peer-checked/neutral:rounded-full peer-checked/neutral:border peer-checked/neutral:border-black"
+            >
+              😐
+            </label>
+
+            <input
+              type="radio"
+              id="sad"
+              name="satisfaction"
+              value="sad"
+              className="peer/sad hidden"
+            />
+            <label
+              htmlFor="sad"
+              className="cursor-pointer p-1 text-2xl peer-checked/sad:bg-white peer-checked/sad:rounded-full peer-checked/sad:border peer-checked/sad:border-black"
+            >
+              😞
+            </label>
+
+            <input
+              type="radio"
+              id="angry"
+              name="satisfaction"
+              value="angry"
+              className="peer/angry hidden"
+            />
+            <label
+              htmlFor="angry"
+              className="cursor-pointer p-1 text-2xl peer-checked/angry:bg-white peer-checked/angry:rounded-full peer-checked/angry:border peer-checked/angry:border-black"
+            >
+              😡
+            </label>
+          </div>
+        </div>
+
         <div className="flex flex-row flex-wrap">
           <input
             type="text"
