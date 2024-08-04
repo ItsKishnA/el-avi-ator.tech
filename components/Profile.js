@@ -1,3 +1,5 @@
+import React from "react";
+
 const Description = () => {
   return (
     <div className="flex px-3">
@@ -34,6 +36,15 @@ const Description = () => {
   );
 };
 
+const MovingStrip = () => {
+  return (
+    <div style={styles.strip}>
+      <div style={styles.textBox}>Open to Work</div>
+      <div style={styles.textBox}>Online</div>
+    </div>
+  );
+};
+
 const Profile = () => {
   return (
     <div className="p-5  w-full">
@@ -49,12 +60,15 @@ const Profile = () => {
         />
         {/* </div> */}
         <div className="flex-1">
-          <p className="px-5 py-3 text-5xl text-white font-pixel font-extralight">
+          <p className="px-5 pt-3 pb-1 text-5xl text-white font-pixel font-extralight">
             <b className="text-[#e50914]">A</b>
             vi <strong className="text-[#e50914]">M</strong>
             ahajan
           </p>
           <p className="px-5 font-mono text-2xl">B.Tech CSE MU'25</p>
+
+          <MovingStrip />
+
           <div className="p-4 m-5 rounded-md border-2 border-[#31353b]">
             <Description />
           </div>
@@ -71,6 +85,34 @@ const styles = {
     fontSize: "1.25rem",
     // lineHeight: "2rem",
     fontWeight: "900",
+  },
+
+  strip: {
+    display: "flex",
+    overflow: "hidden",
+    whiteSpace: "nowrap",
+    width: "100%",
+    animation: "scroll 10s linear infinite",
+  },
+
+  textBox: {
+    backgroundColor: "#31353b",
+    border: "2px solid #ccc",
+    // borderRadius: "20px",
+    padding: "10px 20px",
+    margin: "0 10px",
+    display: "inline-block",
+    whiteSpace: "nowrap",
+    fontSize: "1.2rem",
+  },
+
+  "@keyframes scroll": {
+    "0%": {
+      transform: "translateX(100%)",
+    },
+    "100%": {
+      transform: "translateX(-100%)",
+    },
   },
 };
 
