@@ -56,6 +56,7 @@ const Profile = () => {
           height={300}
           width={300}
           alt="Picture of the author"
+          quality={1}
           className="rounded-full transform-gpu m-2 border-[#31353b] border-2"
         />
         {/* </div> */}
@@ -85,34 +86,6 @@ const styles = {
     fontSize: "1.25rem",
     // lineHeight: "2rem",
     fontWeight: "900",
-  },
-
-  strip: {
-    display: "flex",
-    overflow: "hidden",
-    whiteSpace: "nowrap",
-    width: "100%",
-    animation: "scroll 10s linear infinite",
-  },
-
-  textBox: {
-    backgroundColor: "#31353b",
-    border: "2px solid #ccc",
-    // borderRadius: "20px",
-    padding: "10px 20px",
-    margin: "0 10px",
-    display: "inline-block",
-    whiteSpace: "nowrap",
-    fontSize: "1.2rem",
-  },
-
-  "@keyframes scroll": {
-    "0%": {
-      transform: "translateX(100%)",
-    },
-    "100%": {
-      transform: "translateX(-100%)",
-    },
   },
 };
 

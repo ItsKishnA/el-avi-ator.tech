@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, StyleSheet } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function main() {
   const Project = ({ project }) => {
@@ -30,6 +31,7 @@ export default function main() {
   return (
     <main className="w-screen h-[100dvh] bg-[#0d1117] flex flex-col items-center content-center">
       <SpeedInsights />
+      <Analytics />
       <Profile />
       {/* <About /> */}
       {/* <Projects /> */}
