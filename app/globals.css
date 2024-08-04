@@ -16,6 +16,10 @@
   color: #f8f9fa;
 }
 
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
 nav {
   @apply bg-gray-800;
   color: var(--color-light);

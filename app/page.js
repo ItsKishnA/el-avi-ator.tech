@@ -28,7 +28,7 @@ export default function main() {
   };
 
   return (
-    <main className="w-screen h-screen flex flex-col items-center content-center">
+    <main className="w-screen h-[100dvh] bg-[#0d1117] flex flex-col items-center content-center">
       <SpeedInsights />
       <Profile />
       {/* <About /> */}
