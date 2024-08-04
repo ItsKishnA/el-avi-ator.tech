@@ -2,6 +2,7 @@
 
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Profile from "@/components/Profile";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, StyleSheet } from "react";
@@ -27,11 +28,12 @@ export default function main() {
   };
 
   return (
-    <main className="w-screen h-screen flex flex-col justify-center items-center">
+    <main className="w-screen h-screen flex flex-col items-center content-center">
       <SpeedInsights />
+      <Profile />
       {/* <About /> */}
       {/* <Projects /> */}
-      <Contact />
+      {/* <Contact /> */}
       <div className="p-1 mb-4">Made by @el-avi-ator</div>
     </main>
   );

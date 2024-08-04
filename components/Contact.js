@@ -306,7 +306,10 @@ const MessageMe = () => {
           // className="p-2 m-2 flex-1 rounded-sm"
           required
         />
-        <button type="submit" className="p-2 m-2">
+        <button
+          type="submit"
+          className="p-2 m-2  border border-gray-600 rounded-full text-sm mx-[15%] hover:bg-white transition duration-300 hover:text-black hover:font-bold hover:border-black"
+        >
           Send
         </button>
       </form>

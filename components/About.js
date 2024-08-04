@@ -49,7 +49,7 @@ const About = () => {
     <div
       id="ABOUT"
       style={{ width: "75%" }}
-      className="p-5 flex flex-col-reverse flex-1 md:flex-row"
+      className="p-5 flex flex-col-reverse flex-1 md:flex-row items-center"
     >
       <div className=" flex-[2] md:flex-[3]">
         <h1 className="text-3xl font-bold leading-loose">About Mehhh...</h1>
