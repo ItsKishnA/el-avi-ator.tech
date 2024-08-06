@@ -1,5 +1,4 @@
-import React from "react";
-import { StyleSheet } from "react";
+import React, { useState, useEffect } from "react";
 
 const Description = () => {
   const StyledLetter = ({ children }) => (
@@ -54,26 +53,29 @@ const MovingStrip = () => {
             backgroundColor: color,
             border: `1px solid ${color}`,
             color: textColor,
+            whiteSpace: "nowrap",
+            textOverflow: "ellipsis",
+            overflow: "hidden",
           }}
-          className={`m-2 bg-opacity-20 px-4 rounded-full text-sm font-normal`}
+          className="m-2 px-4 rounded-full text-sm font-normal"
         >
           {title}
         </div>
 
-        <span className={`relative flex h-3 w-3 translate-y-1 -translate-x-4`}>
+        <span className="relative flex h-3 w-3 translate-y-1 -translate-x-4">
           <span
             style={{ backgroundColor: textColor }}
-            className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75`}
+            className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
           ></span>
           <span
             style={{ backgroundColor: textColor }}
-            className={`relative inline-flex rounded-full h-3 w-3`}
+            className="relative inline-flex rounded-full h-3 w-3"
           ></span>
         </span>
       </div>
     );
   };
-  // TODO
+
   return (
     <div style={styles.strip}>
       <Tag
@@ -96,29 +98,66 @@ const MovingStrip = () => {
 };
 
 const Profile = () => {
+  let [size, setSize] = useState(250);
+
+  // useEffect(() => {
+  //   const updateIconSize = () => {
+
+  //   window.addEventListener("resize", updateIconSize);
+  //   updateIconSize(); // Set initial size
+
+  //   return () => window.removeEventListener("resize", updateIconSize);
+  // }, []);
+
+  const ProfilePic = () => {
+    // if (window.innerWidth < 768) {
+    //   setSize(150);
+    // } else if (window.innerWidth < 1024) {
+    //   setSize = 200;
+    // } else {
+    //   setSize = 250;
+    // }
+
+    return (
+      <img
+        src="/images/Myself.jpeg"
+        height={size}
+        width={size}
+        alt="Picture of the author"
+        quality={75}
+        className="rounded-full transform-gpu m-2 border-[#31353b] border-2"
+      />
+    );
+  };
+
+  const Name = () => {
+    return (
+      <p className="px-5 pt-3 pb-1 text-5xl text-white font-pixel font-extralight selection:bg-slate-500 select-all">
+        <b className="text-[#e50914]">A</b>vi{" "}
+        <strong className="text-[#e50914]">M</strong>
+        ahajan
+      </p>
+    );
+  };
+
+  const Bio = () => {
+    return <p className="px-5 font-mono text-2xl">B.Tech CSE MU'25</p>;
+  };
+
   return (
     <div className="p-5  w-full">
       <div className="flex flex-row items-start">
-        <img
-          src="/images/Myself.jpeg"
-          height={300}
-          width={300}
-          alt="Picture of the author"
-          quality={1}
-          className="rounded-full transform-gpu m-2 border-[#31353b] border-2"
-        />
+        <ProfilePic />
 
         <div className="flex-1">
-          <p className="px-5 pt-3 pb-1 text-5xl text-white font-pixel font-extralight selection:bg-slate-500 select-all">
-            <b className="text-[#e50914]">A</b>vi{" "}
-            <strong className="text-[#e50914]">M</strong>
-            ahajan
-          </p>
-          <p className="px-5 font-mono text-2xl">B.Tech CSE MU'25</p>
+          <>
+            <Name />
+            <Bio />
 
-          <div className="flex flex-row px-5 py-2">
-            <MovingStrip />
-          </div>
+            <div className="flex flex-row px-4 py-2">
+              <MovingStrip />
+            </div>
+          </>
 
           <div className="p-4 m-5 rounded-md border-2 border-[#31353b]">
             <Description />

@@ -2,35 +2,26 @@ import Image from "next/image";
 
 const Description = () => {
   return (
-    <div className="flex pr-10">
+    <div className="flex pr-5">
       <p className="text-white leading-relaxed">
-        <b style={styles.firstLetter}>A</b>s a{" "}
-        <b style={styles.firstLetter}>B</b>
-        rilliant <b style={styles.firstLetter}>C</b>
-        omputer science <b style={styles.firstLetter}>D</b>
-        evotee, <b style={styles.firstLetter}>E</b>
-        xuding <b style={styles.firstLetter}>F</b>ervor for learning, I find joy
-        in <b style={styles.firstLetter}>G</b>
-        rasping concepts with ease. <b style={styles.firstLetter}>H</b>aving an{" "}
-        <b style={styles.firstLetter}>I</b>nquisitive and{" "}
-        <b style={styles.firstLetter}>J</b>
-        ovial spirit, I seek <b style={styles.firstLetter}>K</b>nowledge
-        relentlessly. <b style={styles.firstLetter}>L</b>ifelong learning fuels
-        my <b style={styles.firstLetter}>M</b>otivated journey.{" "}
-        <b style={styles.firstLetter}>N</b>urturing an{" "}
-        <b style={styles.firstLetter}>O</b>
-        ptimistic, <b style={styles.firstLetter}>P</b>ositive, and{" "}
-        <b style={styles.firstLetter}>Q</b>uick-to-adapt mindset, I stand as a{" "}
-        <b style={styles.firstLetter}>R</b>emarkable{" "}
-        <b style={styles.firstLetter}>S</b>
-        tudent. <b style={styles.firstLetter}>T</b>ireless,{" "}
-        <b style={styles.firstLetter}>U</b>
-        nwavering, and <b style={styles.firstLetter}>V</b>ersatile, I{" "}
-        <b style={styles.firstLetter}>X</b>cel in creativity.{" "}
-        <b style={styles.firstLetter}>W</b>ith a{" "}
-        <b style={styles.firstLetter}>Y</b>
-        earning for growth, I remain a <b style={styles.firstLetter}>Z</b>
-        ealous explorer of knowledge.
+        I am a dedicated lifelong learner on a quest to master cloud computing
+        and explore the latest tech trends. Embracing the dynamic world of
+        coding, I continuously expand my expertise in cloud technology and other
+        cutting-edge innovations, forging a unique path towards a tech-savvy
+        future. <br />
+        <br />
+        In addition to my passion for cloud computing, I thrive as a React
+        developer, utilizing its powerful capabilities to craft engaging user
+        interfaces and seamless experiences. My proficiency extends to Node.js,
+        empowering me to build robust backend systems that complement my
+        frontend endeavors. Currently, I'm immersed in a thrilling project: the
+        development of a mobile game entirely crafted using JavaScript. This
+        project not only showcases my technical prowess but also exemplifies my
+        dedication to pushing the boundaries of innovation in the tech realm. As
+        I navigate through the intricacies of cloud computing and delve into the
+        depths of coding, I remain steadfast in my pursuit of excellence, eager
+        to uncover new horizons and embrace the ever-evolving landscape of
+        technology.
       </p>
     </div>
   );
@@ -38,9 +29,11 @@ const Description = () => {
 
 const DownloadButton = () => {
   return (
-    <a href={"/resume/resume.pdf"} target="_blank" download={"resume.pdf"}>
-      <button type="button">Download Resume</button>
-    </a>
+    <div style={{ backgroundColor: "red" }}>
+      <a href={"/resume/avi_resume.pdf"} target="_blank" download>
+        <button type="button">Download Resume</button>
+      </a>
+    </div>
   );
 };
 
@@ -48,24 +41,29 @@ const About = () => {
   return (
     <div
       id="ABOUT"
-      style={{ width: "75%" }}
-      className="p-5 flex flex-col-reverse flex-1 md:flex-row items-center"
+      style={{ width: "80%" }}
+      className="p-4 flex flex-col flex-1 items-center"
     >
-      <div className=" flex-[2] md:flex-[3]">
-        <h1 className="text-3xl font-bold leading-loose">About Mehhh...</h1>
-        <Description />
-        <DownloadButton />
-      </div>
+      <div
+        // style={{ width: "80%" }}
+        className="p-4 flex flex-col-reverse flex-1 md:flex-row items-center"
+      >
+        <div className=" flex-[2] md:flex-[3]">
+          <h1 className="text-3xl font-bold leading-loose">About Mehhh...</h1>
+          <Description />
+        </div>
 
-      <div className="flex-[1] content-center md:flex[2]">
-        <Image
-          src="/images/avatar.jpg"
-          width={200}
-          height={200}
-          alt="Picture of the author"
-          className="rounded-full transform-gpu w-full"
-        />
+        <div className="flex-[1] content-center md:flex[2]">
+          <Image
+            src="/images/avatar.jpg"
+            width={200}
+            height={200}
+            alt="Picture of the author"
+            className="rounded-full transform-gpu w-full ml-4"
+          />
+        </div>
       </div>
+      <DownloadButton />
     </div>
   );
 };
