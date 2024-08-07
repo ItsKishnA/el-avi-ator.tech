@@ -44,7 +44,7 @@ const Description = () => {
   );
 };
 
-const MovingStrip = () => {
+const Bullets = () => {
   const Tag = ({ title, color, size = 3, textColor = "white" }) => {
     return (
       <div className="flex flex-row mr-2 ">
@@ -155,7 +155,7 @@ const Profile = () => {
             <Bio />
 
             <div className="flex flex-row px-4 py-2">
-              <MovingStrip />
+              <Bullets />
             </div>
           </>
 

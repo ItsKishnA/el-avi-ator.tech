@@ -197,20 +197,19 @@ const MessageMe = () => {
     <div id="MESSAGE" className="w-[95%] p-4 flex flex-col">
       <h2 className="text-2xl font-bold leading-loose">Drop a message</h2>
 
-      {/* how much did u like our website section... under which user can select one of his choices of satisfaction out of 5...all 5 choices are those happy to sad emojis... */}
-
       <form className="flex flex-col flex-1">
         <div className="flex flex-col flex-wrap">
           <h3 className="text-gray-600 text-base px-2">
             How much did you like our website?
           </h3>
-          <div className="flex flex-row-reverse items-center content-center justify-evenly space-x-4 my-2 flex-wrap">
+          <div className="flex flex-row-reverse items-center content-center justify-evenly space-x-4 mt-1 flex-wrap mb-5">
             <input
               type="radio"
               id="happy"
               name="satisfaction"
               value="happy"
               className="peer/happy hidden"
+              defaultChecked
             />
             <label
               htmlFor="happy"
@@ -277,35 +276,56 @@ const MessageMe = () => {
           </div>
         </div>
 
-        <div className="flex flex-row flex-wrap">
-          <input
-            type="text"
-            placeholder="First Name"
-            style={styles.input}
-            className="flex flex-[1] min-w-0"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name "
-            style={styles.input}
-            className="flex flex-[1] min-w-0"
-            required
-          />
-        </div>
-        <input
-          type="email"
-          placeholder="Email"
-          style={styles.input}
-          // className="p-2 m-2 flex-1 text-gray-600"
-          required
-        />
+        <h3 className="text-gray-600 text-base px-2">
+          Do you have any thoughts you'd like to share?
+        </h3>
         <textarea
           placeholder="Message"
           style={styles.input}
           // className="p-2 m-2 flex-1 rounded-sm"
-          required
+          // required
         />
+        {/* <input
+          type="email"
+          placeholder="Email"
+          style={styles.input}
+          // className="p-2 m-2 flex-1 text-gray-600"
+          // required
+        /> */}
+        <h3 className="text-gray-600 text-base px-2">
+          Dou you want me to contact you back?
+        </h3>
+        <div className="flex flex-row items-center justify-start space-x-4 mt-1 flex-wrap mb-5">
+          <input
+            type="radio"
+            id="agree"
+            name="reach"
+            value="agree"
+            className="peer/agree hidden"
+            defaultChecked
+          />
+          <label
+            htmlFor="agree"
+            className="cursor-pointer px-3 py-0.5 text-xl content-center items-center peer-checked/agree:bg-red-700 peer-checked/agree:rounded-2xl peer-checked/agree:border peer-checked/agree:border-black"
+          >
+            Yes
+          </label>
+
+          <input
+            type="radio"
+            id="disagree"
+            name="reach"
+            value="disagree"
+            className="peer/disagree hidden"
+          />
+          <label
+            htmlFor="disagree"
+            className="cursor-pointer px-3 py-0.5 content-center items-center text-xl peer-checked/disagree:bg-red-700 peer-checked/disagree:rounded-full peer-checked/disagree:border peer-checked/disagree:border-black"
+          >
+            No
+          </label>
+        </div>
+
         <button
           type="submit"
           className="p-2 m-2  border border-gray-600 rounded-full text-sm mx-[15%] hover:bg-white transition duration-300 hover:text-black hover:font-bold hover:border-black"

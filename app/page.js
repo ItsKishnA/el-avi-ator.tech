@@ -10,6 +10,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 export default function main() {
+  //TODO: Add projects
   const Project = ({ project }) => {
     return (
       <div className="p-5 bg-slate-900">
@@ -18,7 +19,6 @@ export default function main() {
       </div>
     );
   };
-
   const Projects = () => {
     return (
       <div id="PROJECTS" className="p-5">
@@ -28,15 +28,34 @@ export default function main() {
     );
   };
 
+  const UnderDevStrip = () => {
+    return (
+      <div id="stripContainer">
+        <div id="strip">
+          This website is under development. Stay tuned for updates!
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <main className="w-full h-[100dvh] bg-[#0d1117] flex flex-col items-center content-center">
+    <main className="w-full bg-[#0d1117] flex flex-col items-center content-center rounded-xl">
+      {/* for monitoring  */}
       <SpeedInsights />
       <Analytics />
+
+      {/* Content of website */}
+      <UnderDevStrip />
       <Profile />
       <About />
       {/* <Projects /> */}
       <Contact />
-      <div className="p-1 mb-4">Made by @el-avi-ator</div>
+
+      <footer className="p-2 text-center text-gray-400">
+        <p>
+          © 2024 @el-<strong className="font-pixel text-xl">avi</strong>-ator
+        </p>
+      </footer>
     </main>
   );
 }

@@ -2,14 +2,15 @@ import Image from "next/image";
 
 const Description = () => {
   return (
-    <div className="flex pr-5">
-      <p className="text-white leading-relaxed">
+    <div className="flex pr-5 flex-col">
+      <p className="text-white leading-relaxed m-1">
         I am a dedicated lifelong learner on a quest to master cloud computing
         and explore the latest tech trends. Embracing the dynamic world of
         coding, I continuously expand my expertise in cloud technology and other
         cutting-edge innovations, forging a unique path towards a tech-savvy
-        future. <br />
-        <br />
+        future.
+      </p>
+      <p className="text-white leading-relaxed m-1">
         In addition to my passion for cloud computing, I thrive as a React
         developer, utilizing its powerful capabilities to craft engaging user
         interfaces and seamless experiences. My proficiency extends to Node.js,
@@ -29,7 +30,7 @@ const Description = () => {
 
 const DownloadButton = () => {
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div className="bg-red-600 p-2 rounded-full px-5 items-center justify-center">
       <a href={"/resume/avi_resume.pdf"} target="_blank" download>
         <button type="button">Download Resume</button>
       </a>
