@@ -145,7 +145,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="p-5  w-full">
+    <div className="p-5  w-full pt-14">
       <div className="flex flex-row items-start">
         <ProfilePic />
 

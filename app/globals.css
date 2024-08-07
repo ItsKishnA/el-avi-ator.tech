@@ -34,3 +34,30 @@ nav {
   color: #e50914;
   font-weight: 900;
 }
+
+.stripContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.strip {
+  display: inline-block;
+  padding: 10px 20px;
+  white-space: nowrap;
+  animation: move 10s linear infinite;
+}
+
+/* @keyframes move {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
