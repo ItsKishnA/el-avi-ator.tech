@@ -116,8 +116,8 @@ const Profile = () => {
   const Name = () => {
     return (
       <p className="px-5 pt-3 pb-1 text-5xl text-white font-pixel font-extralight selection:bg-slate-500 select-all">
-        <b className="text-[#e50914]">A</b>vi{" "}
-        <strong className="text-[#e50914]">M</strong>
+        <strong className="text-7xl text-[#e50914]">A</strong>vi{" "}
+        <strong className="text-7xl text-[#e50914]">M</strong>
         ahajan
       </p>
     );

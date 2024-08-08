@@ -7,7 +7,7 @@ export const metadata = {
   title: "Avi's PortFolio",
   description:
     "Avi's Portfolio website made using Next.js as well as hosted on vercel",
-  icon: "/logo.svg",
+  icon: "Logo.ico",
   keywords: [
     "portfolio",
     "avi mahajan",
@@ -46,6 +46,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/images/Logo.ico" />
       <body className={pixel.variable}>{children}</body>
     </html>
   );
