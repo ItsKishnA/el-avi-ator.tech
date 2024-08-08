@@ -7,10 +7,8 @@ const Description = () => {
     <b
       // STYLES OF THE FIRST LETTER
       style={{
-        // color: "#38bdf8",
         color: "white",
         fontSize: "1.25rem",
-        // lineHeight: "1.90rem",
         fontWeight: "900",
       }}
     >
@@ -103,14 +101,6 @@ const Profile = () => {
   const size = 250;
 
   const ProfilePic = () => {
-    // if (window.innerWidth < 768) {
-    //   setSize(150);
-    // } else if (window.innerWidth < 1024) {
-    //   setSize = 200;
-    // } else {
-    //   setSize = 250;
-    // }
-
     return (
       <img
         src="/images/Myself.jpeg"
@@ -138,13 +128,13 @@ const Profile = () => {
   };
 
   return (
-    <div className="p-5  w-full pt-8">
+    <div className="p-5 w-full pt-8">
       <div className="flex flex-row items-start">
         <div className="flex-1">
-          <div className="flex flex-row">
-            <div>
+          <div className="flex flex-row items-center">
+            <>
               <ProfilePic />
-            </div>
+            </>
             <div className="flex flex-col">
               <Name />
               <Bio />
@@ -168,7 +158,7 @@ const styles = {
     // backgroundColor: "gray",
     display: "flex",
     // overflow: "hidden",
-    // whiteSpace: "nowrap",
+    whiteSpace: "nowrap",
     // width: "100%",
     position: "relative",
     flexDirection: "row",

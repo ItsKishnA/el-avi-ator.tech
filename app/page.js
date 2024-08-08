@@ -38,17 +38,18 @@ export default function main() {
 
   return (
     <main className="w-full bg-[#0d1117] flex flex-col items-center content-center rounded-xl">
-      {/* for monitoring  */}
-      <SpeedInsights />
-      <Analytics />
+      <div className="w-full bg-[#0d1117] flex flex-col items-center content-center rounded-xl">
+        {/* for monitoring  */}
+        <SpeedInsights />
+        <Analytics />
 
-      {/* Content of website */}
-      {/* <UnderDevStrip /> */}
-      <Profile />
-      <About />
-      {/* <Projects /> */}
-      <Contact />
-
+        {/* Content of website */}
+        {/* <UnderDevStrip /> */}
+        <Profile />
+        <About />
+        {/* <Projects /> */}
+        <Contact />
+      </div>
       <footer className="p-2 text-center text-gray-400">
         <p>
           © 2024 @el-<strong className="font-pixel text-xl">avi</strong>-ator
