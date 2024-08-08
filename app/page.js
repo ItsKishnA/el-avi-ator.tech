@@ -3,9 +3,7 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Profile from "@/components/Profile";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState, StyleSheet } from "react";
+import React from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -28,15 +26,15 @@ export default function main() {
     );
   };
 
-  const UnderDevStrip = () => {
-    return (
-      <div id="stripContainer">
-        <div id="strip">
-          This website is under development. Stay tuned for updates!
-        </div>
-      </div>
-    );
-  };
+  // const UnderDevStrip = () => {
+  //   return (
+  //     <div id="stripContainer">
+  //       <div id="strip">
+  //         This website is under development. Stay tuned for updates!
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   return (
     <main className="w-full bg-[#0d1117] flex flex-col items-center content-center rounded-xl">
@@ -45,7 +43,7 @@ export default function main() {
       <Analytics />
 
       {/* Content of website */}
-      <UnderDevStrip />
+      {/* <UnderDevStrip /> */}
       <Profile />
       <About />
       {/* <Projects /> */}

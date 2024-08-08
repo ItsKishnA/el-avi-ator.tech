@@ -4,24 +4,22 @@ const Description = () => {
   return (
     <div className="flex pr-5 flex-col">
       <p className="text-white leading-relaxed m-1">
-        I am a dedicated lifelong learner on a quest to master cloud computing
-        and explore the latest tech trends. Embracing the dynamic world of
-        coding, I continuously expand my expertise in cloud technology and other
-        cutting-edge innovations, forging a unique path towards a tech-savvy
-        future.
+        I am a dedicated lifelong learner on a mission to master cloud computing
+        and explore the latest tech trends. With a deep passion for coding, I
+        continually expand my expertise in cloud technology and cutting-edge
+        innovations, forging a path towards a tech-savvy future. My journey is
+        fueled by a relentless pursuit of knowledge and a commitment to staying
+        at the forefront of technological advancements.
       </p>
       <p className="text-white leading-relaxed m-1">
-        In addition to my passion for cloud computing, I thrive as a React
-        developer, utilizing its powerful capabilities to craft engaging user
-        interfaces and seamless experiences. My proficiency extends to Node.js,
-        empowering me to build robust backend systems that complement my
-        frontend endeavors. Currently, I'm immersed in a thrilling project: the
-        development of a mobile game entirely crafted using JavaScript. This
-        project not only showcases my technical prowess but also exemplifies my
-        dedication to pushing the boundaries of innovation in the tech realm. As
-        I navigate through the intricacies of cloud computing and delve into the
-        depths of coding, I remain steadfast in my pursuit of excellence, eager
-        to uncover new horizons and embrace the ever-evolving landscape of
+        In addition to cloud computing, I excel as a React developer, crafting
+        engaging user interfaces and seamless user experiences. My proficiency
+        in Node.js enables me to build robust backend systems that complement my
+        frontend projects. Currently, I'm immersed in developing a mobile game
+        using JavaScript, a project that showcases my technical prowess and
+        dedication to innovation. As I navigate the intricacies of coding and
+        cloud computing, I remain steadfast in my quest for excellence, eager to
+        embrace new challenges and explore the ever-evolving landscape of
         technology.
       </p>
     </div>

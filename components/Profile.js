@@ -1,3 +1,5 @@
+"use strict";
+
 import React, { useState, useEffect } from "react";
 
 const Description = () => {
@@ -98,16 +100,7 @@ const Bullets = () => {
 };
 
 const Profile = () => {
-  let [size, setSize] = useState(250);
-
-  // useEffect(() => {
-  //   const updateIconSize = () => {
-
-  //   window.addEventListener("resize", updateIconSize);
-  //   updateIconSize(); // Set initial size
-
-  //   return () => window.removeEventListener("resize", updateIconSize);
-  // }, []);
+  const size = 250;
 
   const ProfilePic = () => {
     // if (window.innerWidth < 768) {
@@ -125,7 +118,7 @@ const Profile = () => {
         width={size}
         alt="Picture of the author"
         quality={75}
-        className="rounded-full transform-gpu m-2 border-[#31353b] border-2"
+        className="aspect-square rounded-full transform-gpu m-2 border-[#31353b] border-2"
       />
     );
   };
@@ -145,19 +138,21 @@ const Profile = () => {
   };
 
   return (
-    <div className="p-5  w-full pt-14">
+    <div className="p-5  w-full pt-8">
       <div className="flex flex-row items-start">
-        <ProfilePic />
-
         <div className="flex-1">
-          <>
-            <Name />
-            <Bio />
-
-            <div className="flex flex-row px-4 py-2">
-              <Bullets />
+          <div className="flex flex-row">
+            <div>
+              <ProfilePic />
             </div>
-          </>
+            <div className="flex flex-col">
+              <Name />
+              <Bio />
+              <div className="flex md:flex-row flex-col px-4 py-2">
+                <Bullets />
+              </div>
+            </div>
+          </div>
 
           <div className="p-4 m-5 rounded-md border-2 border-[#31353b]">
             <Description />
@@ -177,27 +172,9 @@ const styles = {
     // width: "100%",
     position: "relative",
     flexDirection: "row",
-    // flexWrap: "",
-  },
-  textBox: {
-    // color: "white",
-    margin: "4px 4px 4px 4px",
-    padding: "0px 8px 0px 8px",
-    // backgroundColor: "darkgray",
-    // display: "flex",
-    // flex: "1",/
 
-    //set a half border rounded
-    borderRadius: "12px",
+    flexWrap: "wrap",
   },
-
-  // firstLetter: {
-  //   // color: "#38bdf8",
-  //   color: "white",
-  //   fontSize: "1.25rem",
-  //   // lineHeight: "1.90rem",
-  //   fontWeight: "900",
-  // },
 };
 
 export default Profile;
