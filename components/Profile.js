@@ -17,8 +17,8 @@ const Description = () => {
   );
 
   return (
-    <div className="flex px-3">
-      <p className="text-gray-300 leading-relaxed select-none">
+    <div className="px-3 rounded-md xl:w-[70%] lg:w-[80%] border-2 border-[#31353b]">
+      <p className="text-gray-300 leading-relaxed select-none p-4 ">
         <StyledLetter>A</StyledLetter>s a <StyledLetter>B</StyledLetter>rilliant{" "}
         <StyledLetter>C</StyledLetter>omputer science{" "}
         <StyledLetter>D</StyledLetter>evotee, <StyledLetter>E</StyledLetter>
@@ -145,10 +145,9 @@ const Profile = () => {
         </div>
 
         {/* abcd... bio */}
-        <div className="p-4 m-5 rounded-md border-2 border-[#31353b]">
+        <div className="p-4 m-5 flex justify-center">
           <Description />
         </div>
-        {/* </div> */}
       </div>
     </div>
   );
