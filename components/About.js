@@ -48,7 +48,7 @@ const About = () => {
         className="p-4 flex flex-col-reverse flex-1 md:flex-row items-center"
       >
         <div className=" flex-[2] md:flex-[3]">
-          <h1 className="text-3xl font-bold leading-loose">About Mehhh...</h1>
+          <h1 className="text-2xl font-bold leading-loose">About Mehhh...</h1>
           <Description />
         </div>
 
@@ -58,7 +58,7 @@ const About = () => {
             width={200}
             height={200}
             alt="Picture of the author"
-            className="rounded-full transform-gpu w-full ml-4"
+            className="rounded-full transform-gpu w-full ml-0 md:ml-4"
           />
         </div>
       </div>

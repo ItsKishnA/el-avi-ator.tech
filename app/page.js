@@ -38,7 +38,7 @@ export default function main() {
 
   return (
     <main className="w-full bg-[#0d1117] flex flex-col items-center content-center rounded-xl">
-      <div className="w-full bg-[#0d1117] flex flex-col items-center content-center rounded-xl">
+      <div className="w-full flex flex-col items-center content-center rounded-xl">
         {/* for monitoring  */}
         <SpeedInsights />
         <Analytics />

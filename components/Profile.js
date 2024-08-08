@@ -47,7 +47,7 @@ const Description = () => {
 const Bullets = () => {
   const Tag = ({ title, color, size = 3, textColor = "white" }) => {
     return (
-      <div className="flex flex-row mr-2 ">
+      <div className="flex flex-row mr-1 ">
         <div
           style={{
             backgroundColor: color,
@@ -104,11 +104,11 @@ const Profile = () => {
     return (
       <img
         src="/images/Myself.jpeg"
-        height={size}
-        width={size}
+        // height={size}
+        // width={}
         alt="Picture of the author"
         quality={75}
-        className="aspect-square rounded-full transform-gpu m-2 border-[#31353b] border-2"
+        className="aspect-square h-[80%] w-[80%] rounded-full transform-gpu m-1 border-[#31353b] border-2"
       />
     );
   };
@@ -128,26 +128,27 @@ const Profile = () => {
   };
 
   return (
-    <div className="p-5 w-full pt-8">
-      <div className="flex flex-row items-start">
-        <div className="flex-1">
-          <div className="flex flex-row items-center">
-            <>
-              <ProfilePic />
-            </>
-            <div className="flex flex-col">
-              <Name />
-              <Bio />
-              <div className="flex md:flex-row flex-col px-4 py-2">
-                <Bullets />
-              </div>
+    <div className="p-4 w-full pt-8">
+      <div className="flex-1 items-start">
+        {/* my pic and headings */}
+        <div className="flex flex-wrap flex-row items-center content-center justify-center">
+          <div className="sm:w-[50%] flex justify-center lg:max-w-[25vw]">
+            <ProfilePic />
+          </div>
+          <div className="sm:flex-1">
+            <Name />
+            <Bio />
+            <div className="px-4 py-2">
+              <Bullets />
             </div>
           </div>
-
-          <div className="p-4 m-5 rounded-md border-2 border-[#31353b]">
-            <Description />
-          </div>
         </div>
+
+        {/* abcd... bio */}
+        <div className="p-4 m-5 rounded-md border-2 border-[#31353b]">
+          <Description />
+        </div>
+        {/* </div> */}
       </div>
     </div>
   );
@@ -157,12 +158,12 @@ const styles = {
   strip: {
     // backgroundColor: "gray",
     display: "flex",
+    // flex: 1,
     // overflow: "hidden",
     whiteSpace: "nowrap",
     // width: "100%",
     position: "relative",
     flexDirection: "row",
-
     flexWrap: "wrap",
   },
 };
