@@ -126,7 +126,10 @@ const ContactMe = () => {
             className="flex items-center bg-gray-800 bg-opacity-50 px-5 py-1 m-2 rounded-full text-sm text-gray-500 border border-gray-700"
             onClick={handleClick}
           >
+            {/* test seen on toCopy Bullet */}
             {toCopy}
+
+            {/* copy icon on bullet */}
             {showCopied ? (
               <svg
                 width="16"
@@ -160,44 +163,7 @@ const ContactMe = () => {
 
   return (
     <div className="p-4 flex flex-col w-full">
-      {/* make a div and add classname and change font to crimson text */}
-
       <h2 className="text-2xl font-bold leading-loose">Contact Me</h2>
-
-      {/* <ContactCard // linkedin
-        cardName="linkedin"
-        title={
-          <span>
-            Follow me on <b className="text-white">LinkedIn</b>
-          </span>
-        }
-        toLink={"https://www.linkedin.com/in/avi-mahajan2401/"}
-        toCopy={"avi-mahajan2401"}
-      />
-
-      <ContactCard // github
-        cardName="github"
-        title={
-          <span>
-            Connect me on <b className="text-white">GitHub</b>
-          </span>
-        }
-        toLink={"https://www.github.com/ItsKishnA"}
-        toCopy={"ItsKishnA"}
-      />
-
-      <ContactCard // gmail
-        cardName="gmail"
-        title={
-          <span>
-            Write me a <b className="text-white">Mail</b>
-          </span>
-        }
-        toLink={
-          "mailto:avi.knw@gmail.com?subject=Feedback&body=I would like to appreciate your work as I..."
-        }
-        toCopy={"avi.knw@gmail.com"}
-      /> */}
 
       {data.map((data, index) => (
         <ContactElement
@@ -230,11 +196,12 @@ const MessageMe = () => {
               name="satisfaction"
               value="happy"
               className="peer/happy hidden"
-              defaultChecked
+              defaultChecked={true}
             />
             <label
               htmlFor="happy"
-              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/happy:bg-white peer-checked/happy:rounded-full peer-checked/happy:border peer-checked/happy:border-black"
+              style={styles.eachLabel}
+              className="text-2xl peer-checked/happy:bg-white peer-checked/happy:rounded-full peer-checked/happy:border peer-checked/happy:border-black"
             >
               😊
             </label>
@@ -248,7 +215,8 @@ const MessageMe = () => {
             />
             <label
               htmlFor="good"
-              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/good:bg-white peer-checked/good:rounded-full peer-checked/good:border peer-checked/good:border-black"
+              style={styles.eachLabel}
+              className="text-2xl peer-checked/good:bg-white peer-checked/good:rounded-full peer-checked/good:border peer-checked/good:border-black"
             >
               😀
             </label>
@@ -262,7 +230,8 @@ const MessageMe = () => {
             />
             <label
               htmlFor="neutral"
-              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/neutral:bg-white peer-checked/neutral:rounded-full peer-checked/neutral:border peer-checked/neutral:border-black"
+              style={styles.eachLabel}
+              className="text-2xl peer-checked/neutral:bg-white peer-checked/neutral:rounded-full peer-checked/neutral:border peer-checked/neutral:border-black"
             >
               😐
             </label>
@@ -276,7 +245,8 @@ const MessageMe = () => {
             />
             <label
               htmlFor="sad"
-              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/sad:bg-white peer-checked/sad:rounded-full peer-checked/sad:border peer-checked/sad:border-black"
+              style={styles.eachLabel}
+              className="text-2xl peer-checked/sad:bg-white peer-checked/sad:rounded-full peer-checked/sad:border peer-checked/sad:border-black"
             >
               😞
             </label>
@@ -290,7 +260,8 @@ const MessageMe = () => {
             />
             <label
               htmlFor="angry"
-              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/angry:bg-white peer-checked/angry:rounded-full peer-checked/angry:border peer-checked/angry:border-black"
+              style={styles.eachLabel}
+              className="text-2xl peer-checked/angry:bg-white peer-checked/angry:rounded-full peer-checked/angry:border peer-checked/angry:border-black"
             >
               😡
             </label>
@@ -385,6 +356,11 @@ const styles = {
     // alignContent: "center",
     // justifyItems: "center",
     // padding: "0rem",
+  },
+  eachLabel: {
+    cursor: "pointer",
+    padding: "0.25rem 0.25rem",
+    userSelect: "none",
   },
   input: {
     margin: "0.5rem",

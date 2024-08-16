@@ -53,9 +53,9 @@ const Bullets = () => {
             backgroundColor: color,
             border: `1px solid ${color}`,
             color: textColor,
-            whiteSpace: "nowrap",
-            textOverflow: "ellipsis",
             overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
           }}
           className="m-2 px-4 rounded-full text-sm font-normal"
         >
@@ -115,9 +115,9 @@ const Profile = () => {
 
   const Name = () => {
     return (
-      <p className="px-5 pt-3 pb-1 text-5xl text-white font-pixel font-extralight selection:bg-slate-500 select-all">
-        <strong className="text-7xl text-[#e50914]">A</strong>vi{" "}
-        <strong className="text-7xl text-[#e50914]">M</strong>
+      <p className="px-5 pt-3 pb-1 text-4xl text-white font-pixel font-extralight selection:bg-slate-500 select-all">
+        <strong className="text-6xl text-[#e50914]">A</strong>vi{" "}
+        <strong className="text-6xl text-[#e50914]">M</strong>
         ahajan
       </p>
     );
