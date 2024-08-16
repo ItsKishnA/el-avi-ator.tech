@@ -46,7 +46,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="icon" href="/images/Logo.ico" />
+      <link rel="icon" href="/Logo.svg" />
       <body className={pixel.variable}>{children}</body>
     </html>
   );
