@@ -34,7 +34,7 @@ const DownloadButton = () => {
       <div className="flex flex-row">
         <div className="flex justify-center items-center whitespace-nowrap">
           <a href={"/resume/avi_resume.pdf"} target="_blank" download>
-            <h5 className="text-gray-600 bg-white text-sm md:text-xs font-mono font-bold p-2 px-4 pr-8 translate-x-6 rounded-l-2xl">
+            <h5 className="text-gray-600 bg-white text-sm sm:text-xs font-mono font-bold p-2 px-4 pr-8 translate-x-6 rounded-l-2xl">
               Download Resume
             </h5>
           </a>
