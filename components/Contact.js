@@ -1,9 +1,13 @@
+"use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { useEffect } from "react";
+import contactSection from "../public/data/contactSection.json";
 
 const ContactMe = () => {
   const [iconSize, setIconSize] = useState(40);
+  const data = contactSection.connector;
 
   useEffect(() => {
     const updateIconSize = () => {
@@ -29,7 +33,7 @@ const ContactMe = () => {
     let viewBoxValue;
     let pathD;
 
-    if (iconName === "gmail") {
+    if (iconName === "Gmail") {
       color = null;
       viewBoxValue = "0 0 48 48";
       pathD = [
@@ -54,12 +58,12 @@ const ContactMe = () => {
           d: "M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0C43.076,8,45,9.924,45,12.298z",
         },
       ];
-    } else if (iconName === "linkedin") {
+    } else if (iconName === "LinkedIn") {
       color = "#0077B5";
       viewBoxValue = "0 0 50 50";
       pathD =
         "M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z";
-    } else if (iconName === "github") {
+    } else if (iconName === "GitHub") {
       color = "#fff";
       viewBoxValue = "0 0 64 64";
       pathD =
@@ -89,7 +93,7 @@ const ContactMe = () => {
     );
   };
 
-  const ContactCard = ({ cardName, title, toCopy, toLink }) => {
+  const ContactElement = ({ cardName, title, toCopy, toLink }) => {
     const [showCopied, setShowCopied] = useState(false);
 
     const handleClick = () => {
@@ -100,13 +104,20 @@ const ContactMe = () => {
       }, 3000);
     };
 
+    console.log(cardName + " " + title + " " + toCopy + " " + toLink);
     return (
       <div className="flex flex-col p-4">
-        <h3 className="text-gray-600 text-base">{title}</h3>
+        <h3 className="text-gray-600 text-base">
+          <span>
+            {title}
+            <b className="text-white">{cardName}</b>
+          </span>
+        </h3>
 
         <div className="flex justify-between">
           {/* icon to redirect follower */}
           <Link href={toLink} target="_blank">
+            {/* //TODO */}
             <Icon iconName={cardName} />
           </Link>
 
@@ -153,7 +164,7 @@ const ContactMe = () => {
 
       <h2 className="text-2xl font-bold leading-loose">Contact Me</h2>
 
-      <ContactCard // linkedin
+      {/* <ContactCard // linkedin
         cardName="linkedin"
         title={
           <span>
@@ -186,7 +197,17 @@ const ContactMe = () => {
           "mailto:avi.knw@gmail.com?subject=Feedback&body=I would like to appreciate your work as I..."
         }
         toCopy={"avi.knw@gmail.com"}
-      />
+      /> */}
+
+      {data.map((data, index) => (
+        <ContactElement
+          key={index}
+          cardName={data.Card}
+          title={data.Quote}
+          toLink={data.Link}
+          toCopy={data.toCopy}
+        />
+      ))}
     </div>
   );
 };

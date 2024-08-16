@@ -1,0 +1,22 @@
+{
+  "connector": [
+    {
+      "Card": "LinkedIn",
+      "Quote": "Follow me on ",
+      "Link": "https://www.linkedin.com/in/avi-mahajan2401/",
+      "toCopy": "avi-mahajan2401"
+    },
+    {
+      "Card": "GitHub",
+      "Quote": "Connect me on ",
+      "Link": "https://www.github.com/ItsKishnA",
+      "toCopy": "ItsKishnA"
+    },
+    {
+      "Card": "Gmail",
+      "Quote": "Write me a ",
+      "Link": "mailto:avi.knw@gmail.com?subject=Feedback&body=I would like to appreciate your work as I...",
+      "toCopy": "avi.knw@gmail.com"
+    }
+  ]
+}
