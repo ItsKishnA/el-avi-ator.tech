@@ -202,7 +202,7 @@ const MessageMe = () => {
           <h3 className="text-gray-600 text-base px-2">
             How much did you like our website?
           </h3>
-          <div className="flex flex-row-reverse items-center content-center justify-evenly space-x-4 mt-1 flex-wrap mb-5">
+          <div className="flex flex-row-reverse items-center content-center justify-evenly mt-1 flex-wrap mb-5">
             <input
               type="radio"
               id="happy"
@@ -213,7 +213,7 @@ const MessageMe = () => {
             />
             <label
               htmlFor="happy"
-              className="cursor-pointer p-1 text-2xl peer-checked/happy:bg-white peer-checked/happy:rounded-full peer-checked/happy:border peer-checked/happy:border-black"
+              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/happy:bg-white peer-checked/happy:rounded-full peer-checked/happy:border peer-checked/happy:border-black"
             >
               😊
             </label>
@@ -227,7 +227,7 @@ const MessageMe = () => {
             />
             <label
               htmlFor="good"
-              className="cursor-pointer p-1 text-2xl peer-checked/good:bg-white peer-checked/good:rounded-full peer-checked/good:border peer-checked/good:border-black"
+              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/good:bg-white peer-checked/good:rounded-full peer-checked/good:border peer-checked/good:border-black"
             >
               😀
             </label>
@@ -241,7 +241,7 @@ const MessageMe = () => {
             />
             <label
               htmlFor="neutral"
-              className="cursor-pointer p-1 text-2xl peer-checked/neutral:bg-white peer-checked/neutral:rounded-full peer-checked/neutral:border peer-checked/neutral:border-black"
+              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/neutral:bg-white peer-checked/neutral:rounded-full peer-checked/neutral:border peer-checked/neutral:border-black"
             >
               😐
             </label>
@@ -255,7 +255,7 @@ const MessageMe = () => {
             />
             <label
               htmlFor="sad"
-              className="cursor-pointer p-1 text-2xl peer-checked/sad:bg-white peer-checked/sad:rounded-full peer-checked/sad:border peer-checked/sad:border-black"
+              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/sad:bg-white peer-checked/sad:rounded-full peer-checked/sad:border peer-checked/sad:border-black"
             >
               😞
             </label>
@@ -269,7 +269,7 @@ const MessageMe = () => {
             />
             <label
               htmlFor="angry"
-              className="cursor-pointer p-1 text-2xl peer-checked/angry:bg-white peer-checked/angry:rounded-full peer-checked/angry:border peer-checked/angry:border-black"
+              className="cursor-pointer py-1 px-0.5 text-2xl peer-checked/angry:bg-white peer-checked/angry:rounded-full peer-checked/angry:border peer-checked/angry:border-black"
             >
               😡
             </label>

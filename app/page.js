@@ -17,6 +17,7 @@ export default function main() {
       </div>
     );
   };
+
   const Projects = () => {
     return (
       <div id="PROJECTS" className="p-5">
