@@ -1,6 +1,9 @@
 "use strict";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
+
+import { motion } from "framer-motion";
 
 const Description = () => {
   const StyledLetter = ({ children }) => (
@@ -10,7 +13,9 @@ const Description = () => {
         color: "white",
         fontSize: "1.25rem",
         fontWeight: "900",
+        fontFamily: "monospace",
       }}
+      className="word-spacing-[1em]"
     >
       {children}
     </b>
@@ -18,7 +23,10 @@ const Description = () => {
 
   return (
     <div className="px-3 rounded-md xl:w-[70%] lg:w-[80%] border-2 border-[#31353b]">
-      <p className="text-gray-300 leading-relaxed select-none p-4 ">
+      <p
+        className="text-slate-400 font-mono leading-normal select-none py-4 px-1 "
+        style={{ wordSpacing: "0.25em" }}
+      >
         <StyledLetter>A</StyledLetter>s a <StyledLetter>B</StyledLetter>rilliant{" "}
         <StyledLetter>C</StyledLetter>omputer science{" "}
         <StyledLetter>D</StyledLetter>evotee, <StyledLetter>E</StyledLetter>
@@ -44,38 +52,38 @@ const Description = () => {
   );
 };
 
-const Bullets = () => {
-  const Tag = ({ title, color, size = 3, textColor = "white" }) => {
-    return (
-      <div className="flex flex-row mr-1 ">
-        <div
-          style={{
-            backgroundColor: color,
-            border: `1px solid ${color}`,
-            color: textColor,
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-          }}
-          className="m-2 px-4 rounded-full text-sm font-normal"
-        >
-          {title}
-        </div>
-
-        <span className="relative flex h-3 w-3 translate-y-1 -translate-x-4">
-          <span
-            style={{ backgroundColor: textColor }}
-            className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
-          ></span>
-          <span
-            style={{ backgroundColor: textColor }}
-            className="relative inline-flex rounded-full h-3 w-3"
-          ></span>
-        </span>
+const Tag = ({ title, color, size = 3, textColor = "white" }) => {
+  return (
+    <div className="flex flex-row mr-1 ">
+      <div
+        style={{
+          backgroundColor: color,
+          border: `1px solid ${color}`,
+          color: textColor,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+        }}
+        className="m-2 px-4 rounded-full text-sm font-normal"
+      >
+        {title}
       </div>
-    );
-  };
 
+      <span className="relative flex h-3 w-3 translate-y-1 -translate-x-4">
+        <span
+          style={{ backgroundColor: textColor }}
+          className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+        ></span>
+        <span
+          style={{ backgroundColor: textColor }}
+          className="relative inline-flex rounded-full h-3 w-3"
+        ></span>
+      </span>
+    </div>
+  );
+};
+
+const Bullets = () => {
   return (
     <div style={styles.strip}>
       <Tag
@@ -104,8 +112,6 @@ const Profile = () => {
     return (
       <img
         src="/images/Myself.jpeg"
-        // height={size}
-        // width={}
         alt="Picture of the author"
         quality={75}
         className="aspect-square h-[80%] w-[80%] rounded-full transform-gpu m-1 border-[#31353b] border-2"
@@ -124,43 +130,57 @@ const Profile = () => {
   };
 
   const Bio = () => {
-    return <p className="px-5 font-mono text-2xl">B.Tech CSE MU'25</p>;
+    return <p className="px-6 font-mono text-2xl">B.Tech CSE MU'25</p>;
   };
 
   return (
-    <div className="p-4 w-full pt-8">
-      <div className="flex-1 items-start">
-        {/* my pic and headings */}
-        <div className="flex flex-wrap flex-row items-center content-center justify-center">
-          <div className="sm:w-[50%] flex justify-center lg:max-w-[25vw]">
-            <ProfilePic />
+    <div className="items-start">
+      {/* my pic and headings */}
+      <div className="flex flex-wrap flex-row items-center content-center justify-center">
+        <motion.div
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ duration: 1 }}
+          className="sm:w-[50%] flex justify-center lg:max-w-[25vw]"
+        >
+          <ProfilePic />
+        </motion.div>
+        <motion.div
+          className="sm:flex-1"
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ duration: 1 }}
+        >
+          <Name />
+          <Bio />
+          <div
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // transition={{ duration: 1 }}
+            className="px-4 py-2"
+          >
+            <Bullets />
           </div>
-          <div className="sm:flex-1">
-            <Name />
-            <Bio />
-            <div className="px-4 py-2">
-              <Bullets />
-            </div>
-          </div>
-        </div>
-
-        {/* abcd... bio */}
-        <div className="p-4 m-5 flex justify-center">
-          <Description />
-        </div>
+        </motion.div>
       </div>
+
+      {/* abcd... bio */}
+      <motion.div
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // transition={{ duration: 1 }}
+        className="p-2 m-1 flex justify-center"
+      >
+        <Description />
+      </motion.div>
     </div>
   );
 };
 
 const styles = {
   strip: {
-    // backgroundColor: "gray",
     display: "flex",
-    // flex: 1,
-    // overflow: "hidden",
     whiteSpace: "nowrap",
-    // width: "100%",
     position: "relative",
     flexDirection: "row",
     flexWrap: "wrap",

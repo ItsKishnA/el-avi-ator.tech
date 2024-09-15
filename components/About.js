@@ -1,27 +1,16 @@
 import Image from "next/image";
+import description from "../public/data/description.json";
 
 const Description = () => {
+  const paragraphs = description.paragraphs;
+
   return (
     <div className="flex pr-5 flex-col">
-      <p className="text-white leading-relaxed m-1">
-        I am a dedicated lifelong learner on a mission to master cloud computing
-        and explore the latest tech trends. With a deep passion for coding, I
-        continually expand my expertise in cloud technology and cutting-edge
-        innovations, forging a path towards a tech-savvy future. My journey is
-        fueled by a relentless pursuit of knowledge and a commitment to staying
-        at the forefront of technological advancements.
-      </p>
-      <p className="text-white leading-relaxed m-1">
-        In addition to cloud computing, I excel as a React developer, crafting
-        engaging user interfaces and seamless user experiences. My proficiency
-        in Node.js enables me to build robust backend systems that complement my
-        frontend projects. Currently, I'm immersed in developing a mobile game
-        using JavaScript, a project that showcases my technical prowess and
-        dedication to innovation. As I navigate the intricacies of coding and
-        cloud computing, I remain steadfast in my quest for excellence, eager to
-        embrace new challenges and explore the ever-evolving landscape of
-        technology.
-      </p>
+      {paragraphs.map((paragraphs, index) => (
+        <p key={index} className="leading-relaxed m-1 font-mono text-slate-400">
+          {paragraphs.para}
+        </p>
+      ))}
     </div>
   );
 };
@@ -54,14 +43,14 @@ const DownloadButton = () => {
                   opacity="0.5"
                   d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
                   stroke="#212121"
-                  stroke-width="2.136"
+                  strokeWidth="2.136"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 ></path>{" "}
                 <path
                   d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
                   stroke="#212121"
-                  stroke-width="2.136"
+                  strokeWidth="2.136"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 ></path>{" "}
@@ -79,7 +68,7 @@ const About = () => {
   return (
     <div
       id="ABOUT"
-      style={{ width: "80%" }}
+      style={{ width: "90%" }}
       className="p-4 flex flex-col flex-1 items-center"
     >
       <div
@@ -104,15 +93,6 @@ const About = () => {
       <DownloadButton />
     </div>
   );
-};
-
-const styles = {
-  firstLetter: {
-    color: "#e50914",
-    fontSize: "1.5rem",
-    // lineHeight: "2rem",
-    fontWeight: "900",
-  },
 };
 
 export default About;

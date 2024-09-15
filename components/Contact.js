@@ -6,10 +6,11 @@ import { useEffect } from "react";
 import contactSection from "../public/data/contactSection.json";
 
 const ContactMe = () => {
-  const [iconSize, setIconSize] = useState(40);
-  const data = contactSection.connector;
+  const [iconSize, setIconSize] = useState(40); // setting initial icon size
+  const data = contactSection.connector; // loading data from contactSection.json
 
   useEffect(() => {
+    // function to update icon size based on window width
     const updateIconSize = () => {
       if (window.innerWidth >= 1024) {
         setIconSize(50);
@@ -21,10 +22,8 @@ const ContactMe = () => {
         setIconSize(35);
       }
     };
-
     window.addEventListener("resize", updateIconSize);
     updateIconSize(); // Set initial size
-
     return () => window.removeEventListener("resize", updateIconSize);
   }, []);
 
@@ -104,26 +103,24 @@ const ContactMe = () => {
       }, 3000);
     };
 
-    console.log(cardName + " " + title + " " + toCopy + " " + toLink);
     return (
       <div className="flex flex-col p-4">
         <h3 className="text-gray-600 text-base">
-          <span>
+          <span className="font-thin">
             {title}
-            <b className="text-white">{cardName}</b>
+            <b className="text-white font-mono font-bold">{cardName}</b>
           </span>
         </h3>
 
         <div className="flex justify-between">
           {/* icon to redirect follower */}
           <Link href={toLink} target="_blank">
-            {/* //TODO */}
             <Icon iconName={cardName} />
           </Link>
 
           {/* copy to clipboard button */}
           <button
-            className="flex items-center bg-gray-800 bg-opacity-50 px-5 py-1 m-2 rounded-full text-sm text-gray-500 border border-gray-700"
+            className="flex items-center bg-gray-800 bg-opacity-50 px-5 py-1 m-2 rounded-full text-sm text-gray-500 border border-gray-700 font-mono tracking-tighter"
             onClick={handleClick}
           >
             {/* test seen on toCopy Bullet */}

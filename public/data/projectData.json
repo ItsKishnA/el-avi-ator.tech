@@ -1,0 +1,81 @@
+{
+  "projects": [
+    {
+      "name": "Memo-Game",
+      "description": "React Native Based Mobile Game",
+      "image": [
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160"
+      ],
+      "technologies": ["React Native", "JavaScript", "Node.js"],
+      "github": "https://github.com",
+      "deployed": "https://deployed.com"
+    },
+
+    {
+      "name": "Project 2",
+      "description": "This is a project description",
+      "image": [
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "github": "https://github.com",
+      "deployed": "https://deployed.com"
+    },
+
+    {
+      "name": "Project 3",
+      "description": "This is a project description",
+      "image": [
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "github": "https://github.com",
+      "deployed": "https://deployed.com"
+    },
+
+    {
+      "name": "Project 4",
+      "description": "This is a project description",
+      "image": [
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "github": "https://github.com",
+      "deployed": "https://deployed.com"
+    },
+
+    {
+      "name": "Project 5",
+      "description": "This is a project description",
+      "image": [
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "github": "https://github.com",
+      "deployed": "https://deployed.com"
+    },
+
+    {
+      "name": "Project 6",
+      "description": "This is a project description",
+      "image": [
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160",
+        "https://via.placeholder.com/90x160"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "github": "https://github.com",
+      "deployed": "https://deployed.com"
+    }
+  ]
+}
