@@ -21,7 +21,7 @@ export default function main() {
   // };
 
   return (
-    <main className="w-[98dvw] h-[98dvh] bg-[#0d1117] flex flex-col items-center content-center rounded-xl p-2">
+    <main className="w-screen h-screen bg-[#0d1117] flex flex-col items-center content-center p-2 xl:rounded-lg xl:h-[98dvh] xl:w-[98dvw]">
       <section className="flex flex-col items-center content-center rounded-xl overflow-y-scroll no-scrollbar pt-2">
         {/* for monitoring  */}
         <SpeedInsights />
