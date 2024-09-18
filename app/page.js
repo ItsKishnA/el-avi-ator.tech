@@ -22,7 +22,7 @@ export default function main() {
 
   return (
     <main className="w-screen h-screen bg-[#0d1117] flex flex-col items-center content-center p-2 xl:rounded-lg xl:h-[98dvh] xl:w-[98dvw]">
-      <section className="flex flex-col items-center content-center rounded-xl overflow-y-scroll no-scrollbar pt-2">
+      <section className="flex flex-col items-center content-center rounded-xl overflow-y-scroll no-scrollbar p-2">
         {/* for monitoring  */}
         <SpeedInsights />
         <Analytics />

@@ -111,10 +111,15 @@ const Profile = () => {
   const ProfilePic = () => {
     return (
       <img
-        src="/images/Myself.jpeg"
+        // src="/images/Myself.jpeg"
+        src="/images/edited.png"
         alt="Picture of the author"
         quality={75}
-        className="aspect-square h-[80%] w-[80%] rounded-full transform-gpu m-1 border-[#31353b] border-2"
+        // width={size}
+        // height={size}
+        // height={0}
+        // width={500}
+        className="h-[80%] aspect-square rounded-full transform-cpu hover:scale-110 transition-transform duration-500 ease-in-out"
       />
     );
   };

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import description from "../public/data/description.json";
 
+import stack from "../public/data/techStack.json";
+
 const Description = () => {
   const paragraphs = description.paragraphs;
 
@@ -65,6 +67,7 @@ const DownloadButton = () => {
 };
 
 const About = () => {
+  const techs = stack.techStack;
   return (
     <div
       id="ABOUT"
@@ -90,6 +93,27 @@ const About = () => {
           />
         </div>
       </div>
+
+      {/* tech stack i k */}
+      <div className="flex flex-col md:flex-[1] items-start content-start">
+        <h1 className="text-2xl font-bold leading-loose">Tech Stack</h1>
+        <div className=" flex flex-wrap gap-3 p-2">
+          {techs.map((tech, id) => (
+            <>
+              <Image
+                src={tech.src}
+                key={tech.id}
+                width={50}
+                height={50}
+                alt={tech.name}
+                // className="transform-gpu w-full ml-0 md:ml-4"
+              />
+              {/* <h4>{tech.name}</h4> */}
+            </>
+          ))}
+        </div>
+      </div>
+
       <DownloadButton />
     </div>
   );
