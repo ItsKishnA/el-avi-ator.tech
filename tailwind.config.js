@@ -9,11 +9,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      // fontFamily: {
-      //   pixel: ["Pixelify_Sans", "sans-serif"],
-      // },
-    },
+    extend: {},
   },
   plugins: [],
 };

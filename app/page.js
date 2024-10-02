@@ -10,15 +10,15 @@ import { Analytics } from "@vercel/analytics/react";
 // import { motion } from "framer-motion";
 
 export default function main() {
-  // const UnderDevStrip = () => {
-  //   return (
-  //     <div id="stripContainer">
-  //       <div id="strip">
-  //         This website is under development. Stay tuned for updates!
-  //       </div>
-  //     </div>
-  //   );
-  // };
+  const UnderDevStrip = () => {
+    return (
+      <div id="stripContainer">
+        <div id="strip">
+          This website is under development. Stay tuned for updates!
+        </div>
+      </div>
+    );
+  };
 
   return (
     <main className="w-screen h-screen bg-[#0d1117] flex flex-col items-center content-center p-2 xl:rounded-lg xl:h-[98dvh] xl:w-[98dvw]">
@@ -28,7 +28,7 @@ export default function main() {
         <Analytics />
 
         {/* Content of website */}
-        {/* <UnderDevStrip /> */}
+        <UnderDevStrip />
         <Profile />
         <About />
         {/* <Project /> */}
@@ -49,3 +49,8 @@ export default function main() {
     </main>
   );
 }
+
+// ROBOTS.TXT
+// User-agent: *
+// Crawl-delay: 10
+// Disallow: /resume/
