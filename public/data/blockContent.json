@@ -1,0 +1,45 @@
+{
+  "data": {
+    "profile": {
+      "bio": "B.Tech CSE MU'25",
+      "intro": "I am a React Native Mobile App Developer with strong command over JavaScript."
+    },
+    "techStack": [
+      {
+        "id": 1,
+        "name": "HTML",
+        "src": "https://skillicons.dev/icons?i=html&theme=dark"
+      },
+      {
+        "id": 2,
+        "name": "CSS",
+        "src": "https://skillicons.dev/icons?i=css&theme=dark"
+      },
+      {
+        "id": 3,
+        "name": "JavaScript",
+        "src": "https://skillicons.dev/icons?i=javascript&theme=dark"
+      },
+      {
+        "id": 4,
+        "name": "React Native",
+        "src": "https://skillicons.dev/icons?i=react&theme=dark"
+      },
+      {
+        "id": 5,
+        "name": "Next.js",
+        "src": "https://skillicons.dev/icons?i=nextjs&theme=dark"
+      },
+      {
+        "id": 6,
+        "name": "Tailwind CSS",
+        "src": "https://skillicons.dev/icons?i=tailwindcss&theme=dark"
+      },
+      {
+        "id": 7,
+        "name": "Node.js",
+        "src": "https://skillicons.dev/icons?i=nodejs&theme=dark"
+      }
+    ]
+  }
+}

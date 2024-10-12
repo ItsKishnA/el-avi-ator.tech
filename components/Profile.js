@@ -2,6 +2,8 @@
 
 import loadedData from "../public/data/blockContent.json";
 
+import { Typography } from "./Typography";
+
 import ReactCurvedText from "react-curved-text";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
@@ -93,11 +95,19 @@ const ProfilePic = ({ size = 250 }) => {
 
 const Name = () => {
   return (
-    <p className="text-4xl text-white font-pixel font-extralight selection:bg-slate-500 select-all pl-1">
-      <strong className="text-6xl text-[#e50914]">A</strong>vi{" "}
-      <strong className="text-6xl text-[#e50914]">M</strong>
+    <Typography
+      variant="h1"
+      className=" text-white font-pixel font-extralight selection:bg-slate-500 select-all pl-1"
+    >
+      <Typography variant="nameRed" className=" text-[#e50914]">
+        A
+      </Typography>
+      vi{" "}
+      <Typography variant="nameRed" className=" text-[#e50914]">
+        M
+      </Typography>
       ahajan
-    </p>
+    </Typography>
   );
 };
 
@@ -107,8 +117,8 @@ const Bio = ({ text }) => {
 
 const Profile = () => {
   return (
-    <div className="flex flex-wrap w-full h-full flex-row items-center justify-center p-2 border-[1px] border-neutral-500 border-opacity-80 rounded-xl">
-      <div className="w-[50%] max-w-[300px]">
+    <div className="flex flex-wrap max-w-[85vw] flex-row items-center justify-center p-2 boxed">
+      <div className="w-[50%] max-w-[400px] min-w-[250px]">
         <ProfilePic />
       </div>
       <div className="flex-1 flex-wrap p-4">
