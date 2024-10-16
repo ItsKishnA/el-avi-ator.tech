@@ -1,10 +1,7 @@
 ("use strict");
 
-import loadedData from "../public/data/blockContent.json";
-
 import { Typography } from "./Typography";
 
-import ReactCurvedText from "react-curved-text";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import CVDownloadButton from "../components/CVDownloadButton";
@@ -12,6 +9,12 @@ import CVDownloadButton from "../components/CVDownloadButton";
 import { motion } from "framer-motion";
 
 import Description from "./ABCD_Description";
+
+const profile = {
+  bio: "B.Tech CSE MU'25",
+  intro:
+    "I am a React Native Mobile App Developer with strong command over JavaScript.",
+};
 
 const Tag = ({
   title = "Bullet_content",
@@ -78,7 +81,7 @@ const Bullets = () => {
   );
 };
 
-const ProfilePic = ({ size = 100 }) => {
+const ProfilePic = ({ size = 250 }) => {
   return (
     <Image
       src="/images/edited.png"
@@ -88,8 +91,6 @@ const ProfilePic = ({ size = 100 }) => {
       height={size}
       layout="responsive"
       loading="eager"
-      // height={100}
-      // width={500}
       className="h-100% aspect-square rounded-full"
     />
   );
@@ -125,10 +126,10 @@ const Profile = () => {
       </div>
       <div className="flex-1 flex-wrap p-4">
         <Name />
-        <Bio text={loadedData.data.profile.bio} />
+        <Bio text={profile.bio} />
         <Bullets />
         <p className="leading-relaxed m-1 font-mono text-slate-400">
-          {loadedData.data.profile.intro}
+          {profile.intro}
         </p>
       </div>
     </div>

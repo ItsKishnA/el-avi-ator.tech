@@ -1,3 +1,5 @@
+import React from "react";
+
 const MemoGame = () => {
   return (
     <div className="flex flex-1 relative boxed flex-col p-4">
@@ -17,7 +19,6 @@ const MemoGame = () => {
             src="https://via.placeholder.com/90x160"
             alt="Memory Game"
             className="rounded-xl bg-slate-500 flex flex-1 h-[142px] w-[80px]"
-            // height={142}
             style={{ objectFit: "cover" }}
           />
         </div>

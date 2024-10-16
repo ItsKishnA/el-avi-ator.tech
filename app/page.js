@@ -2,6 +2,8 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import React from "react";
+
 import Image from "next/image";
 import About from "@/components/TechStack";
 import Profile from "@/components/Profile";
@@ -16,7 +18,7 @@ import Jee from "@/components/Jee";
 import CVDownloadButton from "@/components/CVDownloadButton";
 // import { motion } from "framer-motion";
 
-export default function main() {
+const main = () => {
   // const UnderDevStrip = () => {
   //   return (
   //     <div id="stripContainer">
@@ -118,7 +120,9 @@ export default function main() {
       </div>
     </main>
   );
-}
+};
+
+export default React.memo(main);
 
 // ROBOTS.TXT
 // User-agent: *
