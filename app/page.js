@@ -85,7 +85,7 @@ const main = () => {
         <About />
 
         {/* EDUCATION */}
-        <div className="flex flex-col gap-2 flex-1 flex-wrap">
+        {/* <div className="flex flex-col gap-2 flex-1 flex-wrap">
           <College />
           <div className="flex items-center">
             <Jee />
@@ -93,7 +93,7 @@ const main = () => {
           <div>
             <School />
           </div>
-        </div>
+        </div> */}
 
         {/* CERTIFICATES*/}
         {/* <Certificates /> */}
