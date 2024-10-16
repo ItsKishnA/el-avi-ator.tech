@@ -78,15 +78,17 @@ const Bullets = () => {
   );
 };
 
-const ProfilePic = ({ size = 250 }) => {
+const ProfilePic = ({ size = 100 }) => {
   return (
-    <img
+    <Image
       src="/images/edited.png"
       alt="Avi's Profile Picture"
       quality={75}
-      // width={size}
-      // height={size}
-      // height={0}
+      width={size}
+      height={size}
+      layout="responsive"
+      loading="eager"
+      // height={100}
       // width={500}
       className="h-100% aspect-square rounded-full"
     />
@@ -118,7 +120,7 @@ const Bio = ({ text }) => {
 const Profile = () => {
   return (
     <div className="flex flex-wrap max-w-[85vw] flex-row items-center justify-center p-2 boxed">
-      <div className="w-[50%] max-w-[400px] min-w-[250px]">
+      <div className="w-[50%] max-w-[400px] min-w-[250px] flex items-center justify-center">
         <ProfilePic />
       </div>
       <div className="flex-1 flex-wrap p-4">

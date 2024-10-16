@@ -1,8 +1,13 @@
 import React, { useRef, useEffect } from "react";
+import Image from "next/image";
 
 const size = 150;
 
 const CVDownloadButton = () => {
+  // const imageLoader = ({ src, width, quality }) => {
+  //   return `${"./images/loading.svg"}?w=${width}&q=${quality || 75}`;
+  // };
+
   return (
     <div className="flex boxed items-center justify-center rounded-full pl-12 py-12 flex-row w-full">
       <a href={"/resume/avi_resume.pdf"} target="_blank" download>
@@ -35,14 +40,15 @@ const CVDownloadButton = () => {
               </g>
             </svg>
           </div>
-          <div className="absolute -z-9 -mx-[4.5rem] -my-[2.24rem] opacity-40 translate-x-[1.98rem] -translate-y-1">
-            <img
+          <div className="absolute -z-9 -mx-[4.405rem] -my-[2.20rem] opacity-40 translate-x-[1.98rem] -translate-y-1">
+            <Image
               src="/images/HIRE_ME_CIRCLE.png"
               height={size}
               width={size}
               alt="Hire Me"
-              //   style={{ transformOrigin: "125px 125px" }}
-              className="animate-[spin_14s_linear_infinite] bg-red-200 bg-opacity-0"
+              loading="eager"
+              // loader={imageLoader}
+              className="animate-[spin_15s_linear_infinite] bg-red-200 bg-opacity-0"
             />
           </div>
         </div>

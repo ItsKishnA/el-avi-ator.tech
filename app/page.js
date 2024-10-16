@@ -11,6 +11,7 @@ import Map from "@/components/Map";
 import College from "@/components/College";
 import MemoGame from "@/components/MemoGame";
 import ChatApp from "@/components/ChatApp";
+import Certificates from "@/components/Certificates";
 import Jee from "@/components/Jee";
 import CVDownloadButton from "@/components/CVDownloadButton";
 // import { motion } from "framer-motion";
@@ -47,7 +48,7 @@ export default function main() {
           <rect width="100%" height="100dvh" filter="url(#noiseFilter)" />
         </svg>
       </div> */}
-      <div className="flex flex-col items-center content-center rounded-xl overflow-y-scroll no-scrollbar p-2 gap-2">
+      <div className="flex flex-col items-center content-center rounded-xl overflow-y-scroll no-scrollbar p-2 gap-2 pt-12 pb-8">
         {/* for monitoring  */}
         <SpeedInsights />
         <Analytics />
@@ -91,6 +92,9 @@ export default function main() {
             <School />
           </div>
         </div>
+
+        {/* CERTIFICATES*/}
+        <Certificates />
 
         {/* PROJECTS */}
         <div className="flex flex-col md:flex-row gap-2">
