@@ -6,8 +6,6 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import CVDownloadButton from "../components/CVDownloadButton";
 
-import { motion } from "framer-motion";
-
 import Description from "./ABCD_Description";
 
 const profile = {
@@ -92,6 +90,7 @@ const ProfilePic = ({ size = 250 }) => {
       layout="responsive"
       loading="eager"
       className="h-100% aspect-square rounded-full"
+      optimised
     />
   );
 };

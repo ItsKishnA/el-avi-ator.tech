@@ -16,7 +16,6 @@ import ChatApp from "@/components/ChatApp";
 import Certificates from "@/components/Certificates";
 import Jee from "@/components/Jee";
 import CVDownloadButton from "@/components/CVDownloadButton";
-// import { motion } from "framer-motion";
 
 const main = () => {
   // const UnderDevStrip = () => {
