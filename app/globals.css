@@ -124,18 +124,6 @@ nav {
   }
 }
 
-.animatedSlider {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-}
-
-.animatedSliderContent {
-  display: flex;
-  animation: scroll 10s linear infinite;
-  width: 100%; /* Double the width to accommodate the duplicated content */
-}
-
 .responsive-text {
   h2 {
     font-size: clamp(1rem, 3vw, 1.5rem);
