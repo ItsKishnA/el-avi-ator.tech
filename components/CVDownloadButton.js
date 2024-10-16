@@ -1,13 +1,8 @@
-import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 
 const size = 150;
 
 const CVDownloadButton = () => {
-  // const imageLoader = ({ src, width, quality }) => {
-  //   return `${"./images/loading.svg"}?w=${width}&q=${quality || 75}`;
-  // };
-
   return (
     <div className="flex boxed items-center justify-center rounded-full pl-12 py-12 flex-row w-full">
       <a href={"/resume/avi_resume.pdf"} target="_blank" download>
@@ -40,15 +35,16 @@ const CVDownloadButton = () => {
               </g>
             </svg>
           </div>
-          <div className="absolute -z-9 -mx-[4.405rem] -my-[2.20rem] opacity-40 translate-x-[1.98rem] -translate-y-1">
+          {/* 4.405 x   y 2.20 */}
+          <div className="absolute -mx-[4.4rem] -my-[2.2rem] opacity-40 translate-x-[1.98rem] -translate-y-1">
             <Image
               src="/images/HIRE_ME_CIRCLE.png"
               height={size}
               width={size}
               alt="Hire Me"
               loading="eager"
-              // loader={imageLoader}
-              className="animate-[spin_15s_linear_infinite] bg-red-200 bg-opacity-0"
+              quality={50}
+              className="animate-[spin_15s_linear_infinite]"
             />
           </div>
         </div>
@@ -65,8 +61,6 @@ const CVDownloadButton = () => {
             height="24px"
             viewBox="0 0 576.00 576.00"
             transform="matrix(-1, 0, 0, 1, 0, 0)"
-            // stroke="#000000"
-            // stroke-width="0.00576"
             className="pt-[2px] bg-slate-300 px-[4px] rounded-lg flex items-center justify-center"
           >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
