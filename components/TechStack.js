@@ -53,7 +53,7 @@ const About = () => {
               alt={tech.name}
               width={50}
               height={50}
-              className="transform-gpu"
+              // className="transform-cpu"
             />
           ))}
         </div>

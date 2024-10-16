@@ -15,14 +15,14 @@ const Certificates = () => {
         layout="responsive"
         unoptimized
       />
-      <div className="absolute bottom-0 bg-black bg-opacity-80 w-[100%] p-5">
+      {/* <div className="absolute bottom-0 bg-black bg-opacity-80 w-[100%] p-5">
         <p className="font-mono flex-wrap font-bold">
           Project Management Foundations Certification
         </p>
         <p className="font-mono flex-wrap text-gray-300 font-normal">
           LinkedIn Learning
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };
