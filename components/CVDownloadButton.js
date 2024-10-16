@@ -52,8 +52,11 @@ const CVDownloadButton = () => {
       <a href={"/resume/avi_resume.pdf"} target="_blank">
         <div className="flex justify-center content-center items-center whitespace-nowrap flex-row bg-white p-2 pl-8 pr-4 -translate-x-6 gap-2 rounded-r-2xl">
           <h5 className="text-gray-600 text-sm sm:text-xs font-mono font-bold ">
-            CV / Resume
+            CV
           </h5>
+          <span className="text-gray-600 text-sm sm:text-xs font-mono font-bold max-[350px]:hidden">
+            / Resume
+          </span>
 
           <svg
             fill="#000000"
