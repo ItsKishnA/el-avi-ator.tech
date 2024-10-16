@@ -96,13 +96,13 @@ const main = () => {
         </div>
 
         {/* CERTIFICATES*/}
-        <Certificates />
+        {/* <Certificates /> */}
 
         {/* PROJECTS */}
-        <div className="flex flex-col md:flex-row gap-2">
+        {/* <div className="flex flex-col md:flex-row gap-2">
           <MemoGame />
           <ChatApp />
-        </div>
+        </div> */}
 
         {/* FOOTER */}
         <footer
