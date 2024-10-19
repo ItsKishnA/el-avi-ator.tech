@@ -26,7 +26,7 @@ const Certificates = () => {
 
   return (
     //  w-[80vw] max-w-[680px]
-    <div className=" flex  w-[80dvw] max-w-[680px] justify-center flex-row items-center p-2  rounded-2xl">
+    <div className=" flex  w-[80dvw] max-w-[680px] min-w-[360px] justify-center flex-row items-center p-2  rounded-2xl">
       {/* arrow button for left sliding */}
       <div className=" flex flex-1">
         <button
