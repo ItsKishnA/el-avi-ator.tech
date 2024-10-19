@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const size = 150;
+const _size_Hire_Image = 150;
 
 const CVDownloadButton = () => {
   return (
@@ -39,8 +39,8 @@ const CVDownloadButton = () => {
           <div className="absolute -mx-[4.405rem] -my-[2.2rem] opacity-40 translate-x-[1.98rem] -translate-y-1">
             <Image
               src="/images/HIRE_ME_CIRCLE.png"
-              height={size}
-              width={size}
+              height={_size_Hire_Image}
+              width={_size_Hire_Image}
               alt="Hire Me"
               loading="eager"
               quality={50}

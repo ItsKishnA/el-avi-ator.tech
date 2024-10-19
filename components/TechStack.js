@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-// import CVDownloadButton from "./CVDownloadButton";
+const _sizeTech = 50;
 
-const loadedData = [
+const _loadedData = [
   {
     id: 1,
     name: "HTML",
@@ -46,13 +46,13 @@ const About = () => {
       <div className="flex flex-col md:flex-[1] items-start content-start gap-2">
         <h1 className="text-xl font-bold leading-tight">Tech Stack</h1>
         <div className=" flex flex-row flex-wrap gap-[8px] justify-center">
-          {loadedData.map((tech, id) => (
+          {_loadedData.map((tech, id) => (
             <Image
               src={tech.src}
               key={id}
               alt={tech.name}
-              width={50}
-              height={50}
+              width={_sizeTech}
+              height={_sizeTech}
               // className="transform-cpu"
             />
           ))}

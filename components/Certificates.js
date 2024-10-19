@@ -1,13 +1,19 @@
 import Image from "next/image";
+import React, { useState } from "react";
 
 const Certificates = () => {
-  return (
-    <div className="boxed p-2 flex w-[80vw] max-w-[680px] justify-center flex-col items-center overflow-hidden">
+  const _arrowSize = 30;
+
+  const _src = ["/certificates/pm_pmmi.jpg", "/certificates/jscript.jpg"];
+  var [currentSlide, setCurrentSlide] = useState(0);
+
+  var Slider = ({ value }) => {
+    return (
       <Image
-        src="/certificates/pm_pmmi.jpg"
+        src={_src[value]}
         alt="Certificates"
-        height={200}
-        width={200}
+        height={100}
+        width={100}
         className="rounded-2xl"
         style={{ objectFit: "contain" }}
         loading="lazy"
@@ -15,15 +21,64 @@ const Certificates = () => {
         layout="responsive"
         unoptimized
       />
-      {/* <div className="absolute bottom-0 bg-black bg-opacity-80 w-[100%] p-5">
-        <p className="font-mono flex-wrap font-bold">
-          Project Management Foundations Certification
-        </p>
-        <p className="font-mono flex-wrap text-gray-300 font-normal">
-          LinkedIn Learning
-        </p>
-      </div> */}
+    );
+  };
+
+  return (
+    //  w-[80vw] max-w-[680px]
+    <div className=" flex  w-[80dvw] max-w-[680px] justify-center flex-row items-center p-2  rounded-2xl">
+      {/* arrow button for left sliding */}
+      <div className=" flex flex-1">
+        <button
+          className=" text-white rounded-full pr-2 z-10"
+          onClick={() => {
+            if (currentSlide > 0) setCurrentSlide((prevSlide) => prevSlide - 1);
+            else setCurrentSlide(_src.length - 1);
+          }}
+        >
+          {_svgArrow({ _arrowSize })}
+        </button>
+      </div>
+
+      <div>{Slider({ value: currentSlide })}</div>
+
+      <div className="flex flex-1">
+        <button
+          className=" text-white rounded-full pl-2 z-10"
+          onClick={() => {
+            if (currentSlide < _src.length - 1)
+              setCurrentSlide((prevSlide) => prevSlide + 1);
+            else setCurrentSlide(0);
+          }}
+        >
+          {_svgArrow({ _arrowSize, rotation: 0 })}
+        </button>
+      </div>
     </div>
+  );
+};
+
+const _svgArrow = ({ _arrowSize, rotation = 180 }) => {
+  return (
+    <svg
+      shape-rendering="geometricPrecision"
+      text-rendering="geometricPrecision"
+      image-rendering="optimizeQuality"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      height={_arrowSize}
+      width={_arrowSize}
+      viewBox="0 0 511.999 511.999"
+      style={{
+        transform: `rotate(${rotation}deg)`,
+      }}
+    >
+      <path
+        fill="#fff"
+        fill-rule="nonzero"
+        d="M0 256c0-70.685 28.658-134.695 74.981-181.019C121.305 28.658 185.308 0 256 0c70.691 0 134.694 28.658 181.018 74.981 46.323 46.324 74.981 110.327 74.981 181.019 0 70.691-28.658 134.694-74.981 181.018-46.324 46.323-110.327 74.981-181.018 74.981-70.692 0-134.695-28.658-181.019-74.981C28.658 390.694 0 326.691 0 256zm200.641 79.002c-17.862 30.984 6.963 46.316 25.063 29.013l101.045-88.741c16.137-16.13 16.137-22.426 0-38.563L225.704 147.97c-18.187-17.181-42.867-2.203-25.063 29.02l46.931 79.002-46.931 79.01z"
+      />
+    </svg>
   );
 };
 

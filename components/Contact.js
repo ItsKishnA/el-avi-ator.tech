@@ -7,7 +7,7 @@ import contactSection from "../public/data/contactSection.json";
 
 const ContactMe = () => {
   const [iconSize, setIconSize] = useState(40); // setting initial icon size
-  const data = contactSection.connector; // loading data from contactSection.json
+  const _data = contactSection.connector; // loading data from contactSection.json
 
   useEffect(() => {
     // function to update icon size based on window width
@@ -162,7 +162,7 @@ const ContactMe = () => {
     <div className="p-4 flex flex-col w-full">
       <h2 className="text-2xl font-bold leading-loose">Contact Me</h2>
 
-      {data.map((data, index) => (
+      {_data.map((data, index) => (
         <ContactElement
           key={index}
           cardName={data.Card}

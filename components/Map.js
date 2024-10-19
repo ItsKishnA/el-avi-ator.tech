@@ -8,6 +8,8 @@ const Map = ({ size }) => {
       width={size}
       height={size}
       className="rounded-2xl boxed"
+      quality={100}
+      unoptimized
     />
   );
 };
