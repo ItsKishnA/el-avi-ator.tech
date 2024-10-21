@@ -7,7 +7,7 @@ const Certificates = () => {
   const _src = ["/certificates/pm_pmmi.jpg", "/certificates/jscript.jpg"];
   var [currentSlide, setCurrentSlide] = useState(0);
 
-  var Slider = ({ value }) => {
+  const Slider = ({ value }) => {
     return (
       <Image
         src={_src[value]}
@@ -24,36 +24,53 @@ const Certificates = () => {
     );
   };
 
+  const prevSlide = () => {
+    if (currentSlide > 0) setCurrentSlide((prevSlide) => prevSlide - 1);
+    else setCurrentSlide(_src.length - 1);
+  };
+
+  const nextSlide = () => {
+    if (currentSlide < _src.length - 1)
+      setCurrentSlide((prevSlide) => prevSlide + 1);
+    else setCurrentSlide(0);
+  };
+
+  // const SlideChanger = () => {
+  //   return (
+  //     <>
+  //       <button
+  //         className=" text-white rounded-full pr-2 z-10"
+  //         onClick={() => prevSlide()}
+  //       >
+  //         {_svgArrow({ _arrowSize })}
+  //       </button>
+  //     </>
+  //   );
+  // };
+
   return (
     //  w-[80vw] max-w-[680px]
     <div className=" flex  w-[80dvw] max-w-[680px] min-w-[360px] justify-center flex-row items-center p-2  rounded-2xl">
       {/* arrow button for left sliding */}
-      <div className=" flex flex-1">
+      <>
         <button
           className=" text-white rounded-full pr-2 z-10"
-          onClick={() => {
-            if (currentSlide > 0) setCurrentSlide((prevSlide) => prevSlide - 1);
-            else setCurrentSlide(_src.length - 1);
-          }}
+          onClick={() => prevSlide()}
         >
           {_svgArrow({ _arrowSize })}
         </button>
-      </div>
+      </>
 
       <div>{Slider({ value: currentSlide })}</div>
 
-      <div className="flex flex-1">
+      <>
         <button
           className=" text-white rounded-full pl-2 z-10"
-          onClick={() => {
-            if (currentSlide < _src.length - 1)
-              setCurrentSlide((prevSlide) => prevSlide + 1);
-            else setCurrentSlide(0);
-          }}
+          onClick={() => nextSlide()}
         >
           {_svgArrow({ _arrowSize, rotation: 0 })}
         </button>
-      </div>
+      </>
     </div>
   );
 };
