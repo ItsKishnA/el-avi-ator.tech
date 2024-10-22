@@ -43,9 +43,9 @@ const _loadedData = [
 const About = () => {
   return (
     <div className="flex flex-col h-full items-center boxed p-4">
-      <div className="flex flex-col md:flex-[1] items-start content-start gap-2">
+      <div className="flex flex-col md:flex-[1] items-stretch content-start w-full gap-2">
         <h1 className="text-xl font-bold leading-tight">Tech Stack</h1>
-        <div className=" flex flex-row flex-wrap gap-[8px] justify-center">
+        <div className=" flex flex-row flex-wrap justify-start gap-3">
           {_loadedData.map((tech, id) => (
             <Image
               src={tech.src}

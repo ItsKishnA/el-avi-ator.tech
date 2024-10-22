@@ -5,7 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import React from "react";
 
 import Image from "next/image";
-import About from "@/components/TechStack";
+import TechStack from "@/components/TechStack";
 import Profile from "@/components/Profile";
 import PublicProfile from "@/components/PublicProfile";
 import School from "@/components/School";
@@ -49,7 +49,8 @@ const main = () => {
           <rect width="100%" height="100dvh" filter="url(#noiseFilter)" />
         </svg>
       </div> */}
-      <div className="flex flex-col items-center content-center rounded-xl overflow-y-scroll no-scrollbar p-2 gap-2 pt-12 pb-8">
+
+      <div className="flex flex-col items-center content-center rounded-xl overflow-y-scroll no-scrollbar p-2 gap-2 pt-8 pb-4">
         {/* for monitoring  */}
         <SpeedInsights />
         <Analytics />
@@ -65,6 +66,7 @@ const main = () => {
 
         {/* Content of website */}
         {/* <UnderDevStrip /> */}
+
         <div className="flex flex-col md:flex-row gap-2">
           <Profile />
 
@@ -81,10 +83,10 @@ const main = () => {
             <Map size={250} />
           </div>
         </div>
-        <About />
 
         {/* EDUCATION */}
         <div className="flex flex-col gap-2 flex-1 flex-wrap">
+          <TechStack />
           <College />
           <div className="flex items-center">
             <Jee />
