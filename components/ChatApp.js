@@ -25,7 +25,7 @@ const ChatApp = () => {
       </div>
       <div className="flex flex-col mt-2 flex-wrap">
         <div className="flex flex-row items-center justify-between">
-          <h1 className="font-bold text-lg">Chat App</h1>
+          <h1 className="font-bold text-lg text-sky-300">Chat App</h1>
           <a href="https://github.com/ItsKishnA/MyChatApp" target="_blank">
             <h3 className="font-mono text-md text-gray-100 underline">Code</h3>
           </a>

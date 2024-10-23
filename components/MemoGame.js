@@ -35,7 +35,7 @@ const MemoGame = () => {
       </div>
       <div className="flex flex-col mt-2">
         <div className="flex flex-row items-center justify-between">
-          <h1 className="font-bold text-lg">Memory Game</h1>
+          <h1 className="font-bold text-lg text-sky-300">Memory Game</h1>
           <a href="https://github.com/ItsKishnA/Memo-Game" target="_blank">
             <h3 className="font-mono text-md text-gray-100 underline">Code</h3>
           </a>

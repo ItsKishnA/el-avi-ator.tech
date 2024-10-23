@@ -42,7 +42,7 @@ const _loadedData = [
 
 const About = () => {
   return (
-    <div className="flex flex-col h-full items-center boxed p-4">
+    <article className="flex flex-col h-full items-center boxed p-4">
       <div className="flex flex-col md:flex-[1] items-stretch content-start w-full gap-2">
         <h1 className="text-xl font-bold leading-tight">Tech Stack</h1>
         <div className=" flex flex-row flex-wrap justify-start gap-3">
@@ -58,7 +58,7 @@ const About = () => {
           ))}
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

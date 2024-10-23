@@ -4,7 +4,11 @@ import React, { useState } from "react";
 const Certificates = () => {
   const _arrowSize = 30;
 
-  const _src = ["/certificates/pm_pmmi.jpg", "/certificates/jscript.jpg"];
+  const _src = [
+    "/certificates/pm_pmmi.jpg",
+    "/certificates/jscript.jpg",
+    "/certificates/GRiD_partic.jpg",
+  ];
   var [currentSlide, setCurrentSlide] = useState(0);
 
   const Slider = ({ value }) => {
