@@ -16,6 +16,7 @@ import ChatApp from "@/components/ChatApp";
 import Certificates from "@/components/Certificates";
 import Jee from "@/components/Jee";
 import CVDownloadButton from "@/components/CVDownloadButton";
+import Contact from "@/components/Contact";
 
 const main = () => {
   // const UnderDevStrip = () => {
@@ -84,26 +85,43 @@ const main = () => {
           </div>
         </div>
 
-        {/* EDUCATION */}
-        <div className="flex flex-col gap-2 flex-1 flex-wrap">
-          <TechStack />
-          <College />
-          <div className="flex items-center">
-            <Jee />
+        <div className="flex flex-col xl:flex-row">
+          {/* EDUCATION */}
+          <div className="flex flex-[1] flex-col gap-2 ">
+            <div>
+              <TechStack />
+            </div>
+            <div>
+              <College />
+            </div>
+            <div className="flex items-center">
+              <Jee />
+            </div>
+            <div>
+              <School />
+            </div>
           </div>
-          <div>
-            <School />
+
+          {/* CERTIFICATES*/}
+          <div className="flex flex-[1]">
+            <Certificates />
           </div>
         </div>
-
-        {/* CERTIFICATES*/}
-        <Certificates />
 
         {/* PROJECTS */}
         <div className="flex flex-col md:flex-row gap-2">
-          <MemoGame />
-          <ChatApp />
+          <div className="flex-[1] flex">
+            <MemoGame />
+          </div>
+          <div className="flex-[1] flex">
+            <ChatApp />
+          </div>
         </div>
+
+        {/* Contact */}
+        {/* <div>
+          <Contact />
+        </div> */}
 
         {/* FOOTER */}
         <footer

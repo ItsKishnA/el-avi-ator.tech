@@ -14,11 +14,11 @@ const Jee = () => {
       <div className="flex flex-col justify-center items-end">
         <p className="font-mono text-gray-400 leading-tight">
           <strong className="text-white font-mono mr-1">85.128</strong>
-          Percentile
+          <span className="max-[350px]:hidden">Percentile</span>
         </p>
         <p className="font-mono text-gray-400 leading-tight">
-          <strong className="text-white font-mono mr-1">Qualified</strong> for
-          JEE Adv.
+          <strong className="text-white font-mono mr-1">Qualified</strong>
+          <span className="max-[350px]:hidden">for JEE Adv.</span>
         </p>
       </div>
     </div>

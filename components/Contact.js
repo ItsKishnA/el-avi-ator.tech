@@ -184,8 +184,10 @@ const MessageMe = () => {
       <form className="flex flex-col flex-1">
         <div className="flex flex-col flex-wrap">
           <h3 className="text-gray-600 text-base px-2">
-            How much did you like our website?
+            How much did you like this website?
           </h3>
+
+          {/* Emoji selection */}
           <div className="flex flex-row-reverse items-center content-center justify-evenly mt-1 flex-wrap mb-5">
             <input
               type="radio"
@@ -268,52 +270,22 @@ const MessageMe = () => {
         <h3 className="text-gray-600 text-base px-2">
           Do you have any thoughts you'd like to share?
         </h3>
+
+        {/* Message dropbox */}
+
+        <input
+          type="email"
+          placeholder="type.your@mail.com"
+          style={styles.input}
+          // className="p-2 m-2"
+          // required
+        />
         <textarea
           placeholder="Message"
           style={styles.input}
-          // className="p-2 m-2 flex-1 rounded-sm"
+          // className="p-2 m-2"
           // required
         />
-        {/* <input
-          type="email"
-          placeholder="Email"
-          style={styles.input}
-          // className="p-2 m-2 flex-1 text-gray-600"
-          // required
-        /> */}
-        <h3 className="text-gray-600 text-base px-2">
-          Dou you want me to contact you back?
-        </h3>
-        <div className="flex flex-row items-center justify-start space-x-4 mt-1 flex-wrap mb-5">
-          <input
-            type="radio"
-            id="agree"
-            name="reach"
-            value="agree"
-            className="peer/agree hidden"
-            defaultChecked
-          />
-          <label
-            htmlFor="agree"
-            className="cursor-pointer px-3 py-0.5 text-xl content-center items-center peer-checked/agree:bg-red-700 peer-checked/agree:rounded-2xl peer-checked/agree:border peer-checked/agree:border-black"
-          >
-            Yes
-          </label>
-
-          <input
-            type="radio"
-            id="disagree"
-            name="reach"
-            value="disagree"
-            className="peer/disagree hidden"
-          />
-          <label
-            htmlFor="disagree"
-            className="cursor-pointer px-3 py-0.5 content-center items-center text-xl peer-checked/disagree:bg-red-700 peer-checked/disagree:rounded-full peer-checked/disagree:border peer-checked/disagree:border-black"
-          >
-            No
-          </label>
-        </div>
 
         <button
           type="submit"
@@ -335,12 +307,12 @@ const Contact = () => {
       >
         <MessageMe />
       </div>
-      <div
+      {/* <div
         style={styles.components}
         className="flex flex-[1] p-2 justify-center w-[85%]"
       >
         <ContactMe />
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -361,9 +333,11 @@ const styles = {
   },
   input: {
     margin: "0.5rem",
-    padding: "0.5rem",
-    borderRadius: "0.125rem",
-    color: "#0f0f0f",
+    padding: "0.25rem",
+    color: "#a0a0a0",
+    backgroundColor: "#f0f0f000",
+    borderBottom: "1px solid #f0f0f0",
+    resize: "none",
   },
 };
 

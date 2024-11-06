@@ -4,7 +4,7 @@ const ChatApp = () => {
       <div className="flex flex-col gap-2 items-center">
         <div className="w-full flex justify-start">
           <img
-            src="./images/Screenshot_1729539343.png"
+            src="./images/SS_Chatters.png"
             alt="Chat App (1)"
             className=" rounded-xl"
             width={213}
@@ -14,7 +14,7 @@ const ChatApp = () => {
         </div>
         <div className="w-full flex justify-end">
           <img
-            src="./images/Screenshot_1729539565.png"
+            src="./images/SS_Chat.png"
             alt="Chat App (2)"
             className="rounded-xl bg-slate-500"
             width={213}
