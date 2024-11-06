@@ -21,7 +21,7 @@ const Certificates = () => {
           width={500}
           className="rounded-2xl"
           style={{ objectFit: "contain" }}
-          loading="lazy"
+          loading={value === 0 ? "eager" : "lazy"}
           quality={75}
           // layout="responsive"
           unoptimized
