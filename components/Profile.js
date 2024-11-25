@@ -89,7 +89,7 @@ const ProfilePic = ({ size = 250 }) => {
       height={size}
       layout="responsive"
       loading="eager"
-      className="h-100% aspect-square rounded-full"
+      className="h-100% aspect-square rounded-full hover:scale-105 transform transition-transform duration-300 ease-in-out"
       optimised
     />
   );

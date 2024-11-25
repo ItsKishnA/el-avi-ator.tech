@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./../app/globals.css";
+import { Typography } from "./Typography";
 
 const School = () => {
   return (
@@ -8,20 +9,32 @@ const School = () => {
         <img
           src="/images/sophia.jpg"
           alt="School"
-          // layout="responsive"
           width={250}
           height={100}
+          // layout="responsive"
           className="rounded-2xl"
         />
       </div>
       <div className="flex flex-[3] flex-col">
-        <h3 className="font-bold text-lg flex flex-wrap">
+        {/* <h3 className="font-bold text-lg flex flex-wrap">
           Sophia Convent Se. Sec. School
-        </h3>
+        </h3> */}
+        <Typography variant="h4" className="font-bold">
+          Sophia Convent Se. Sec. School
+        </Typography>
+
         <div className="flex w-full justify-between">
-          <p className="font-mono text-gray-400">CBSE</p>
-          <h6 className="font-mono text-gray-600">2006-2021</h6>
+          {/* <p className="font-mono text-gray-400">CBSE</p> */}
+          <Typography variant="body" className="text-gray-400 font-mono">
+            CBSE
+          </Typography>
+
+          {/* <h6 className="font-mono text-gray-600">2006-2021</h6> */}
+          <Typography variant="body" className="text-gray-600 font-mono">
+            2006-2021
+          </Typography>
         </div>
+
         <div className="flex justify-center items-center">
           <table className="w-[75%]">
             <tbody>

@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import { Typography } from "./Typography";
 
 const MemoGame = () => {
   return (
@@ -38,9 +39,18 @@ const MemoGame = () => {
       </div>
       <div className="flex flex-col mt-2">
         <div className="flex flex-row items-center justify-between">
-          <h1 className="font-bold text-lg text-sky-300">Memory Game</h1>
+          {/* <h1 className="font-bold text-lg text-sky-300">Memory Game</h1> */}
+          <Typography variant="h4" className="text-sky-300 font-bold">
+            Memory Game
+          </Typography>
           <a href="https://github.com/ItsKishnA/Memo-Game" target="_blank">
-            <h3 className="font-mono text-md text-gray-100 underline">Code</h3>
+            {/* <h3 className="font-mono text-md text-gray-100 underline">Code</h3> */}
+            <Typography
+              variant="h5"
+              className="text-gray-100 underline font-mono"
+            >
+              Code
+            </Typography>
           </a>
         </div>
         <p className="text-gray-400 font-mono flex-wrap flex-shrink">

@@ -85,7 +85,7 @@ const main = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row">
+        <div className="flex flex-col xl:flex-row items-center justify-center content-center">
           {/* EDUCATION */}
           <div className="flex flex-[1] flex-col gap-2 ">
             <div>
@@ -103,7 +103,7 @@ const main = () => {
           </div>
 
           {/* CERTIFICATES*/}
-          <div className="flex flex-[1]">
+          <div className="flex flex-[1]  items-center justify-center">
             <Certificates />
           </div>
         </div>
