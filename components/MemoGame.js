@@ -1,6 +1,8 @@
 // import React from "react";
 import { Typography } from "./Typography";
 
+import Bullets from "@/constants/bullets";
+
 const MemoGame = () => {
   return (
     <div className="flex flex-1 relative boxed flex-col p-4">
@@ -56,6 +58,13 @@ const MemoGame = () => {
         <p className="text-gray-400 font-mono flex-wrap flex-shrink">
           A simple memory game built using React Native and Node JS.
         </p>
+
+        <Bullets
+          title={["React Native", "Node JS", "Socket.IO"]}
+          bgColor={["#AE862580"]}
+          textColor={["#F7EF8ACC"]}
+          borderColor={["#FAF39855"]}
+        />
       </div>
     </div>
   );

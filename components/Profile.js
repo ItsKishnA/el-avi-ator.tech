@@ -8,75 +8,12 @@ import CVDownloadButton from "../components/CVDownloadButton";
 
 import Description from "./ABCD_Description";
 
+import Bullets from "@/constants/bullets";
+
 const profile = {
   bio: "B.Tech CSE MU'25",
   intro:
     "I am a React Native Mobile App Developer with strong command over JavaScript.",
-};
-
-const Tag = ({
-  title = "Bullet_content",
-  color = "white",
-  textColor = "white",
-}) => {
-  return (
-    <div className="flex flex-row mr-1 ">
-      <div
-        style={{
-          backgroundColor: color,
-          border: `1px solid ${color}`,
-          color: textColor,
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
-        }}
-        className="m-2 px-4 rounded-full text-sm font-normal"
-      >
-        {title}
-      </div>
-
-      <span className="relative flex h-3 w-3 translate-y-1 -translate-x-4">
-        <span
-          style={{ backgroundColor: textColor }}
-          className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
-        ></span>
-        <span
-          style={{ backgroundColor: textColor }}
-          className="relative inline-flex rounded-full h-3 w-3"
-        ></span>
-      </span>
-    </div>
-  );
-};
-
-const Bullets = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        whiteSpace: "nowrap",
-        position: "relative",
-        flexDirection: "row",
-        flexWrap: "wrap",
-      }}
-    >
-      <Tag
-        title="Open to Work"
-        color="rgba(244, 114, 182, 0.25)"
-        textColor="rgba(244, 114, 182, 1)"
-      />
-      <Tag
-        title="Internship"
-        color="rgba(34, 197, 94, 0.25)"
-        textColor="rgba(34, 197, 94, 1)"
-      />
-      <Tag
-        title="Online"
-        color="rgba(14, 165, 233, 0.25)"
-        textColor="rgba(14, 165, 233, 1)"
-      />
-    </div>
-  );
 };
 
 const ProfilePic = ({ size = 250 }) => {
@@ -114,7 +51,12 @@ const Name = () => {
 };
 
 const Bio = ({ text }) => {
-  return <p className="pl-2 font-mono text-2xl">{text}</p>;
+  // return <p className="pl-2 font-mono text-2xl">{text}</p>;
+  return (
+    <Typography variant="p" className="pl-2 font-mono text-2xl">
+      {text}
+    </Typography>
+  );
 };
 
 const Profile = () => {
@@ -126,7 +68,25 @@ const Profile = () => {
       <div className="flex-1 flex-wrap p-4">
         <Name />
         <Bio text={profile.bio} />
-        <Bullets />
+        <Bullets
+          title={["Open to Work", "Internship", "Online"]}
+          bgColor={[
+            "rgba(244, 114, 182, 0.25)",
+            "rgba(34, 197, 94, 0.25)",
+            "rgba(14, 165, 233, 0.25)",
+          ]}
+          textColor={[
+            "rgba(244, 114, 182, 1)",
+            "rgba(34, 197, 94, 1)",
+            "rgba(14, 165, 233, 1)",
+          ]}
+          highlighted={["true", "true", "true"]}
+          borderColor={[
+            "rgba(244, 114, 182, 0.25)",
+            "rgba(34, 197, 94, 0.25)",
+            "rgba(14, 165, 233, 0.25)",
+          ]}
+        />
         <p className="leading-relaxed m-1 font-mono text-slate-400">
           {profile.intro}
         </p>

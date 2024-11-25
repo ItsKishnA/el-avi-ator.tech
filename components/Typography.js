@@ -34,7 +34,7 @@ const tags = {
   h4: "h4",
   h5: "h5",
   h6: "h6",
-  body: "p",
+  p: "p",
   // "body-small": "p",
   small: "span",
   strong: "strong",

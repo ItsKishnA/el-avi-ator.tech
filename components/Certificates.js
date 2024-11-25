@@ -5,15 +5,15 @@ const Certificates = () => {
   const _arrowSize = 30;
 
   const _src = [
-    "/certificates/pm_pmmi.jpg",
     "/certificates/jscript.jpg",
+    "/certificates/pm_pmmi.jpg",
     "/certificates/GRiD_partic.jpg",
   ];
-  var [currentSlide, setCurrentSlide] = useState(0);
+  var [currentSlide, setCurrentSlide] = useState(1);
 
   const Slider = ({ value }) => {
     return (
-      <div className="relative w-[100%] h-[100%] flex flex-1 justify-center">
+      <div className="relative w-[100%] h-[100%] flex flex-1 justify-center align-middle content-center items-center">
         <Image
           src={_src[value]}
           alt="Certificates"
@@ -58,7 +58,7 @@ const Certificates = () => {
   return (
     //  w-[80vw] max-w-[680px]
     <div className=" flex flex-1 w-[80dvw] max-w-[680px] min-w-[360px] h-auto flex-col items-center justify-center p-2 ">
-      {/* <h3 className="text-white text-lg font-bold">Certificates</h3> */}
+      {/* <h3 className="text-white text-lg font-mono">Certificates</h3> */}
       <div className=" flex justify-center flex-row items-center rounded-2xl content-center">
         {/* arrow button for left sliding */}
         <div className=" flex items-center justify-center">
@@ -70,7 +70,15 @@ const Certificates = () => {
           </button>
         </div>
 
+        {/* <div className="flex">
+          <div className="flex relative -z-5 translate-x-20 w-[70%] h-[70%] items-center justify-center align-middle content-center">
+            {Slider({ value: currentSlide - 1 })}
+          </div> */}
         <div className="flex relative ">{Slider({ value: currentSlide })}</div>
+        {/* <div className="flex relative -z-5">
+            {Slider({ value: currentSlide + 1 })}
+          </div>
+        </div> */}
 
         <div className=" ">
           <button

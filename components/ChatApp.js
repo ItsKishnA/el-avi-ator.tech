@@ -1,3 +1,4 @@
+import Bullets from "@/constants/bullets";
 import { Typography } from "./Typography";
 
 const ChatApp = () => {
@@ -28,11 +29,14 @@ const ChatApp = () => {
       <div className="flex flex-col mt-2 flex-wrap">
         <div className="flex flex-row items-center justify-between">
           {/* <h1 className="font-bold text-lg text-sky-300">Chat App</h1> */}
+
           <Typography variant="h4" className="text-sky-300 font-bold">
-            Chat App
+            Chat App UI
           </Typography>
+
           <a href="https://github.com/ItsKishnA/MyChatApp" target="_blank">
             {/* <h3 className="font-mono text-md text-gray-100 underline">Code</h3> */}
+
             <Typography
               variant="h5"
               className="text-gray-100 underline font-mono"
@@ -41,12 +45,19 @@ const ChatApp = () => {
             </Typography>
           </a>
         </div>
-        {/* <p className="text-gray-400 font-mono">
-          A simple chat application built using ReactJS
-        </p> */}
-        <Typography variant="body" className="text-gray-400 font-mono">
+
+        <Typography variant="p" className="text-gray-400 font-mono">
           A unique conceptual Chat-Application built using React Native.
         </Typography>
+
+        {/* <div> */}
+        <Bullets
+          title={["React Native", "Firebase", "Expo"]}
+          bgColor={["#AE862580"]}
+          textColor={["#F7EF8ACC"]}
+          borderColor={["#FAF39855"]}
+        />
+        {/* </div> */}
       </div>
     </div>
   );
