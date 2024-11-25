@@ -36,12 +36,13 @@ const CVDownloadButton = () => {
             </svg>
           </div>
           {/* 4.405 x   y 2.20 */}
-          <div className="absolute -mx-[4.405rem] -my-[2.2rem] opacity-40 translate-x-[1.98rem] -translate-y-1">
+          <div className="absolute -mx-[4.405rem] -my-[2.20rem] opacity-40 translate-x-[1.98rem] -translate-y-1">
             <Image
               src="/images/HIRE_ME_CIRCLE.png"
               height={_size_Hire_Image}
               width={_size_Hire_Image}
-              alt="Hire Me"
+              // i want no nul if image not loaded
+              // alt="Hire Me"
               loading="eager"
               quality={50}
               className="animate-[spin_15s_linear_infinite]"

@@ -46,7 +46,7 @@ const ChatApp = () => {
           </a>
         </div>
 
-        <Typography variant="p" className="text-gray-400 font-mono">
+        <Typography variant="body" className="text-gray-400 font-mono">
           A unique conceptual Chat-Application built using React Native.
         </Typography>
 

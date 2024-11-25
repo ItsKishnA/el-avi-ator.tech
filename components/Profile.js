@@ -18,17 +18,20 @@ const profile = {
 
 const ProfilePic = ({ size = 250 }) => {
   return (
-    <Image
-      src="/images/edited.png"
-      alt="Avi's Profile Picture"
-      quality={75}
-      width={size}
-      height={size}
-      layout="responsive"
-      loading="eager"
-      className="h-100% aspect-square rounded-full hover:scale-105 transform transition-transform duration-300 ease-in-out"
-      optimised
-    />
+    <div style={{ position: "relative", width: size, height: size }}>
+      <Image
+        src="/images/edited.png"
+        alt="Avi's Profile Picture"
+        quality={75}
+        // width={size}
+        // height={size}
+        // layout="responsive"
+        fill
+        loading="eager"
+        className="h-100% aspect-square rounded-full hover:scale-105 transform transition-transform duration-300 ease-in-out"
+        // optimised
+      />
+    </div>
   );
 };
 
@@ -53,7 +56,7 @@ const Name = () => {
 const Bio = ({ text }) => {
   // return <p className="pl-2 font-mono text-2xl">{text}</p>;
   return (
-    <Typography variant="p" className="pl-2 font-mono text-2xl">
+    <Typography variant="body" className="pl-2 font-mono text-2xl">
       {text}
     </Typography>
   );

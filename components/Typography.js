@@ -17,6 +17,8 @@ const sizes = (variant) => {
       return "text-md";
     case "p":
       return "text-sm";
+    // case "body":
+    // return "text-base";
     case "small":
       return "text-";
     case "strong":
@@ -34,7 +36,7 @@ const tags = {
   h4: "h4",
   h5: "h5",
   h6: "h6",
-  p: "p",
+  body: "p",
   // "body-small": "p",
   small: "span",
   strong: "strong",

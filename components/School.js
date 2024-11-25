@@ -25,12 +25,12 @@ const School = () => {
 
         <div className="flex w-full justify-between">
           {/* <p className="font-mono text-gray-400">CBSE</p> */}
-          <Typography variant="p" className="text-gray-400 font-mono">
+          <Typography variant="body" className="text-gray-400 font-mono">
             CBSE
           </Typography>
 
           {/* <h6 className="font-mono text-gray-600">2006-2021</h6> */}
-          <Typography variant="p" className="text-gray-600 font-mono">
+          <Typography variant="body" className="text-gray-600 font-mono">
             2006-2021
           </Typography>
         </div>
