@@ -56,7 +56,7 @@ const MemoGame = () => {
           </a>
         </div>
         <p className="text-gray-400 font-mono flex-wrap flex-shrink">
-          A simple memory game built using React Native and Node JS.
+          A simple memory game built using React Native.
         </p>
 
         <Bullets
