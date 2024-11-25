@@ -60,7 +60,7 @@ const MemoGame = () => {
         </p>
 
         <Bullets
-          title={["React Native", "Node JS", "Socket.IO"]}
+          title={["React Native", "Expo"]}
           bgColor={["#AE862580"]}
           textColor={["#F7EF8ACC"]}
           borderColor={["#FAF39855"]}
