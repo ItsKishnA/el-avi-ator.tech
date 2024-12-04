@@ -19,7 +19,7 @@ const College = () => {
         </h3>
         <div className="flex flex-row justify-between">
           <p className="font-mono tracking-tighter">B.Tech CSE</p>
-          <h6 className="text-gray-600 font-mono">2020-2021</h6>
+          <h6 className="text-gray-600 font-mono">2021-2025</h6>
         </div>
         <p className="font-mono font-bold">CGPA: 7.97</p>
       </div>
