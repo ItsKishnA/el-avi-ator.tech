@@ -30,7 +30,7 @@ const main = () => {
   // };
 
   return (
-    <main className=" bg-[#0d1117d0] flex flex-1 h-full w-full items-center content-center justify-center">
+    <main className=" bg-[#0d1117d0] flex flex-1 h-full w-full items-center content-center justify-center p-2">
       {/* <div
         id="noiseCanvas"
         className="fixed top-0 left-0 overflow-hidden w-full h-full pointer-events-none opacity-15 "
@@ -88,9 +88,6 @@ const main = () => {
         <div className="flex flex-col xl:flex-row items-center justify-center content-center">
           {/* EDUCATION */}
           <div className="flex flex-[1] flex-col gap-2 ">
-            <div>
-              <TechStack />
-            </div>
             <div>
               <College />
             </div>

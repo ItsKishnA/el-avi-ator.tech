@@ -42,18 +42,18 @@ const Certificates = () => {
     else setCurrentSlide(0);
   };
 
-  // const SlideChanger = () => {
-  //   return (
-  //     <>
-  //       <button
-  //         className=" text-white rounded-full pr-2 z-10"
-  //         onClick={() => prevSlide()}
-  //       >
-  //         {_svgArrow({ _arrowSize })}
-  //       </button>
-  //     </>
-  //   );
-  // };
+  const SlideChanger = ({ show, onPress }) => {
+    return (
+      <div className="flex items-center justify-center ">
+        <button
+          className="group text-white rounded-full p-2 z-10"
+          onClick={() => onPress()}
+        >
+          {show}
+        </button>
+      </div>
+    );
+  };
 
   return (
     //  w-[80vw] max-w-[680px]
@@ -61,33 +61,18 @@ const Certificates = () => {
       {/* <h3 className="text-white text-lg font-mono">Certificates</h3> */}
       <div className=" flex justify-center flex-row items-center rounded-2xl content-center">
         {/* arrow button for left sliding */}
-        <div className=" flex items-center justify-center">
-          <button
-            className="group text-white rounded-full pr-2 z-10"
-            onClick={() => prevSlide()}
-          >
-            {_svgArrow({ _arrowSize })}
-          </button>
-        </div>
+        <SlideChanger
+          show={_svgArrow({ _arrowSize })}
+          onPress={() => prevSlide()}
+        />
 
-        {/* <div className="flex">
-          <div className="flex relative -z-5 translate-x-20 w-[70%] h-[70%] items-center justify-center align-middle content-center">
-            {Slider({ value: currentSlide - 1 })}
-          </div> */}
         <div className="flex relative ">{Slider({ value: currentSlide })}</div>
-        {/* <div className="flex relative -z-5">
-            {Slider({ value: currentSlide + 1 })}
-          </div>
-        </div> */}
 
-        <div className=" ">
-          <button
-            className="group text-white rounded-full pl-2 z-10"
-            onClick={() => nextSlide()}
-          >
-            {_svgArrow({ _arrowSize, rotation: 0 })}
-          </button>
-        </div>
+        {/* arrow button for right sliding */}
+        <SlideChanger
+          show={_svgArrow({ _arrowSize, rotation: 0 })}
+          onPress={() => nextSlide()}
+        />
       </div>
     </div>
   );

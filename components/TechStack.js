@@ -33,14 +33,14 @@ const _loadedData = [
     name: "Tailwind CSS",
     src: "https://skillicons.dev/icons?i=tailwindcss&theme=dark",
   },
-  {
-    id: 7,
-    name: "Node.js",
-    src: "https://skillicons.dev/icons?i=nodejs&theme=dark",
-  },
+  // {
+  //   id: 7,
+  //   name: "Node.js",
+  //   src: "https://skillicons.dev/icons?i=nodejs&theme=dark",
+  // },
 ];
 
-const About = () => {
+const TechStack = () => {
   return (
     <article className="flex flex-col h-full items-center boxed p-4">
       <div className="flex flex-col md:flex-[1] items-stretch content-start w-full gap-2">
@@ -62,4 +62,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default TechStack;
