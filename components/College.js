@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Typography } from "./Typography";
 
 const College = () => {
   return (
@@ -14,14 +15,26 @@ const College = () => {
         />
       </div>
       <div className="flex flex-col gap-1 flex-[3] justify-center">
-        <h3 className="font-bold text-lg flex flex-wrap ">
+        {/* <h3 className="font-bold text-lg flex flex-wrap ">
           Medi-Caps University
-        </h3>
+        </h3> */}
+        <Typography variant="h3" className="font-bold text-lg flex flex-wrap ">
+          Medi-Caps University
+        </Typography>
         <div className="flex flex-row justify-between">
-          <p className="font-mono tracking-tighter">B.Tech CSE</p>
-          <h6 className="text-gray-600 font-mono">2021-2025</h6>
+          {/* <p className="font-mono tracking-tighter">B.Tech CSE</p> */}
+          <Typography variant="body" className="font-mono tracking-tighter">
+            B.Tech CSE
+          </Typography>
+          {/* <h6 className="text-gray-600 font-mono">2021-2025</h6> */}
+          <Typography variant="h6" className="text-gray-600 font-mono">
+            2021-2025
+          </Typography>
         </div>
-        <p className="font-mono font-bold">CGPA: 7.97</p>
+        {/* <p className="font-mono font-bold">CGPA: 7.97</p> */}
+        <Typography variant="body" className="font-mono font-bold">
+          CGPA: 7.97
+        </Typography>
       </div>
     </div>
   );

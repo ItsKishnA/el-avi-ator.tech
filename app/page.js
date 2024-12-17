@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import React from "react";
+import { useState } from "react";
 
 import Image from "next/image";
 import TechStack from "@/components/TechStack";
@@ -16,7 +17,8 @@ import ChatApp from "@/components/ChatApp";
 import Certificates from "@/components/Certificates";
 import Jee from "@/components/Jee";
 import CVDownloadButton from "@/components/CVDownloadButton";
-import Contact from "@/components/Contact";
+import Release from "@/components/Release";
+// import Contact from "@/components/Contact";
 
 const main = () => {
   // const UnderDevStrip = () => {
@@ -28,6 +30,12 @@ const main = () => {
   //     </div>
   //   );
   // };
+  const [debugging, setDebugging] = useState(false);
+
+  const handleDebugger = () => {
+    console.log("Debugging is ", !debugging);
+    setDebugging((prev) => !prev);
+  };
 
   return (
     <main className=" bg-[#0d1117d0] flex flex-1 h-full w-full items-center content-center justify-center p-2">
@@ -132,6 +140,11 @@ const main = () => {
           <p>
             © 2024 @el-<strong className="font-pixel text-xl">avi</strong>-ator
           </p>
+          <Release
+            debugging={debugging}
+            setDebugging={setDebugging}
+            handler={handleDebugger}
+          />
         </footer>
       </div>
     </main>

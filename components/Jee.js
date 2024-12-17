@@ -3,9 +3,12 @@ import { Typography } from "./Typography";
 const Jee = () => {
   return (
     <div className="flex flex-1 flex-row w-full justify-between boxed content-center align-middle px-4 gap-4">
-      <h2 className="font-mono responsive-text-h2 flex items-center">
+      {/* <h2 className="font-mono responsive-text-h2 flex items-center">
         Jee Mains 2021
-      </h2>
+      </h2> */}
+      <Typography variant="h6" className="font-mono flex items-center">
+        Jee Mains 2021
+      </Typography>
       <img
         src="./images/nta.jpg"
         alt="Jee"

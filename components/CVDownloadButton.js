@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Typography } from "./Typography";
 
 const _size_Hire_Image = 150;
 
@@ -41,7 +42,6 @@ const CVDownloadButton = () => {
               src="/images/HIRE_ME_CIRCLE.png"
               height={_size_Hire_Image}
               width={_size_Hire_Image}
-              // i want no nul if image not loaded
               // alt="Hire Me"
               loading="eager"
               quality={50}
@@ -52,12 +52,22 @@ const CVDownloadButton = () => {
       </a>
       <a href={"/resume/avi_resume.pdf"} target="_blank">
         <div className="flex justify-center content-center items-center whitespace-nowrap flex-row bg-white p-2 pl-8 pr-4 -translate-x-6 gap-2 rounded-r-2xl">
-          <h5 className="text-gray-600 text-sm sm:text-xs font-mono font-bold ">
+          {/* <h5 className="text-gray-600 text-sm sm:text-xs font-mono font-bold ">
             CV
-          </h5>
-          <span className="text-gray-600 text-sm sm:text-xs font-mono font-bold max-[350px]:hidden">
-            / Resume
-          </span>
+          </h5> */}
+          <Typography
+            variant="body"
+            className="text-gray-600 font-mono font-bold min-[350px]:hidden"
+          >
+            CV
+          </Typography>
+
+          <Typography
+            variant="body"
+            className="text-gray-600 font-mono font-bold max-[350px]:hidden"
+          >
+            Resume
+          </Typography>
 
           <svg
             fill="#000000"
