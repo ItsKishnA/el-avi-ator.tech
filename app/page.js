@@ -87,7 +87,7 @@ const main = () => {
         {/* Content of website */}
         {/* <UnderDevStrip /> */}
 
-        {/* <div>
+        <div>
           <img
             src="./cursor-circle.svg"
             style={{
@@ -107,7 +107,7 @@ const main = () => {
             }}
             className="custom-cursor"
           />
-        </div> */}
+        </div>
 
         <div className="flex flex-col md:flex-row gap-2">
           <Profile />

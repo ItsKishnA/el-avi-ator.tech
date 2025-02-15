@@ -21,6 +21,11 @@ const _sizeTech = 50;
 
 const _loadedData = [
   {
+    id: 0,
+    name: "C++",
+    src: "https://skillicons.dev/icons?i=cpp&theme=dark",
+  },
+  {
     id: 1,
     name: "HTML",
     src: "https://skillicons.dev/icons?i=html&theme=dark",
