@@ -46,7 +46,7 @@ const main = () => {
       className=" bg-[#0d1117d0] flex flex-1 h-full w-full items-center content-center justify-center p-2"
       style={{
         cursor: debugging
-          ? `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="red"/></svg>') 8 8,auto`
+          ? `url('data:image/svg+xml;utf8,<svg width="16" height="16"><circle cx="8" cy="8" r="8" fill="red"/></svg>') 8 8,auto`
           : "default",
       }}
     >
@@ -87,7 +87,7 @@ const main = () => {
         {/* Content of website */}
         {/* <UnderDevStrip /> */}
 
-        <div>
+        {/* <div>
           <img
             src="./cursor-circle.svg"
             style={{
@@ -103,11 +103,11 @@ const main = () => {
               left: isHovered ? `${x - 16}px` : `${x - 8}px`,
               transition: "all 0.1s ease",
               cursor: "none",
-              cursor: url("./icons/cursor.png"),
+              cursor: "./icons/cursor.png",
             }}
             className="custom-cursor"
           />
-        </div>
+        </div> */}
 
         <div className="flex flex-col md:flex-row gap-2">
           <Profile />
