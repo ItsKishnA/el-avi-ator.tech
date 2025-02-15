@@ -3,12 +3,16 @@ import { Typography } from "./Typography";
 
 const _size_Hire_Image = 150;
 
-const CVDownloadButton = () => {
+const CVDownloadButton = ({ isHovered, setIsHovered }) => {
   return (
     <div className="flex boxed items-center justify-center rounded-full pl-12 py-12 flex-row w-full">
       <a href={"/resume/avi_resume.pdf"} target="_blank" download>
         <div className="relative flex ">
-          <div className="rounded-full z-10 bg-red-600 animate-pulse-red p-6">
+          <div
+            className="rounded-full z-10 bg-red-600 animate-pulse-red p-6"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
@@ -17,7 +21,6 @@ const CVDownloadButton = () => {
                 strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
-                {" "}
                 <path
                   opacity="0.5"
                   d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
@@ -25,14 +28,14 @@ const CVDownloadButton = () => {
                   strokeWidth="2.136"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                ></path>{" "}
+                ></path>
                 <path
                   d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
                   stroke="#212121"
                   strokeWidth="2.136"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                ></path>{" "}
+                ></path>
               </g>
             </svg>
           </div>

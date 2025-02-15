@@ -23,17 +23,12 @@
   box-sizing: border-box;
 }
 
-.custom-cursor {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="red"/></svg>')
-      8 8,
-    auto;
+* {
+  cursor: url("/icons/cursor.png"), auto;
+}
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  pointer-events: none;
-  mix-blend-mode: difference;
+.mine:hover ~ .custom-cursor {
+  transform: scale(5);
 }
 
 ::-webkit-scrollbar {

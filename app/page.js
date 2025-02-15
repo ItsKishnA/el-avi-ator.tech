@@ -18,6 +18,7 @@ import Certificates from "@/components/Certificates";
 import Jee from "@/components/Jee";
 import CVDownloadButton from "@/components/CVDownloadButton";
 import Release from "@/components/Release";
+import useMousePosition from "@/backend/useMousePosition";
 // import Contact from "@/components/Contact";
 
 const main = () => {
@@ -31,14 +32,24 @@ const main = () => {
   //   );
   // };
   const [debugging, setDebugging] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleDebugger = () => {
     console.log("Debugging is ", !debugging);
     setDebugging((prev) => !prev);
   };
 
+  const { x, y } = useMousePosition();
+
   return (
-    <main className=" bg-[#0d1117d0] flex flex-1 h-full w-full items-center content-center justify-center p-2">
+    <main
+      className=" bg-[#0d1117d0] flex flex-1 h-full w-full items-center content-center justify-center p-2"
+      style={{
+        cursor: debugging
+          ? `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="red"/></svg>') 8 8,auto`
+          : "default",
+      }}
+    >
       {/* <div
         id="noiseCanvas"
         className="fixed top-0 left-0 overflow-hidden w-full h-full pointer-events-none opacity-15 "
@@ -76,13 +87,38 @@ const main = () => {
         {/* Content of website */}
         {/* <UnderDevStrip /> */}
 
+        <div>
+          <img
+            src="./cursor-circle.svg"
+            style={{
+              position: "absolute",
+              zIndex: 1000,
+              pointerEvents: "none",
+              mixBlendMode: "difference",
+              width: isHovered ? "32px" : "16px",
+              height: isHovered ? "32px" : "16px",
+              // top: `${y - 8}px`,
+              top: isHovered ? `${y - 16}px` : `${y - 8}px`,
+              // left: `${x - 8}px`,
+              left: isHovered ? `${x - 16}px` : `${x - 8}px`,
+              transition: "all 0.1s ease",
+              cursor: "none",
+              cursor: url("./icons/cursor.png"),
+            }}
+            className="custom-cursor"
+          />
+        </div>
+
         <div className="flex flex-col md:flex-row gap-2">
           <Profile />
 
           {/* My Contacts */}
           <div className="flex flex-col flex-1 gap-2 justify-center items-center">
             <div className="flex flex-col gap-2 ">
-              <CVDownloadButton />
+              <CVDownloadButton
+                isHovered={isHovered}
+                setIsHovered={setIsHovered}
+              />
               <div className="flex flex-row justify-center gap-2">
                 <PublicProfile icon="github" />
                 <PublicProfile icon="linkedin" />
@@ -95,7 +131,7 @@ const main = () => {
 
         <div className="flex flex-col xl:flex-row items-center justify-center content-center">
           {/* EDUCATION */}
-          <div className="flex flex-[1] flex-col gap-2 ">
+          <div className="flex flex-[1] flex-col gap-2">
             <div>
               <College />
             </div>
