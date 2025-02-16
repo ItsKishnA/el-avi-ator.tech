@@ -33,7 +33,7 @@ const College = () => {
         </div>
         {/* <p className="font-mono font-bold">CGPA: 7.97</p> */}
         <Typography variant="body" className="font-mono font-bold">
-          CGPA: 7.97
+          CGPA: 8.14
         </Typography>
       </div>
     </div>

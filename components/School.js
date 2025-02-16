@@ -4,7 +4,7 @@ import { Typography } from "./Typography";
 
 const School = () => {
   return (
-    <div className=" p-4 h-full flex flex-1 flex-col md:flex-row-reverse items-center content-center justify-center boxed gap-4">
+    <div className=" p-4 h-full flex flex-1 flex-col sm:flex-row items-center content-center justify-center boxed gap-4">
       <div className="flex flex-[2] justify-center items-center">
         <img
           src="/images/sophia.jpg"
@@ -23,7 +23,7 @@ const School = () => {
           Sophia Convent Se. Sec. School
         </Typography>
 
-        <div className="flex w-full justify-between">
+        <div className="flex flex-row w-full justify-between">
           {/* <p className="font-mono text-gray-400">CBSE</p> */}
           <Typography variant="body" className="text-gray-400 font-mono">
             CBSE
@@ -36,7 +36,7 @@ const School = () => {
         </div>
 
         <div className="flex justify-center items-center">
-          <table className="w-[75%]">
+          <table className="w-[90%]">
             <tbody>
               <tr>
                 <td className="flex justify-center mr-2">X:</td>
